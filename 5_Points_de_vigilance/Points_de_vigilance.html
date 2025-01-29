@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Points de vigilance &#8212; ChatGPT, Copilot et autres assistants IA. Quels usages à l’ULB?</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5_Points_de_vigilance/Points_de_vigilance';</script>
+    <link rel="icon" href="../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Principes d’utilisation à l’ULB" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html" />
+    <link rel="prev" title="Améliorer ses prompts" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/academia.jpg" class="logo__image only-light" alt=""/>
+    <script>document.write(`<img src="../_static/academia.jpg" class="logo__image only-dark" alt=""/>`);</script>
+  
+  
+    <p class="title logo__title">ChatGPT, Copilot et autres assistants IA. Quels usages à l’ULB?</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html">IA générative: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Exemples_usage/Exemples_usage.html">Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Comment_ca_marche/Comment_ca_marche.html">Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">Améliorer ses prompts</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Points de vigilance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html">Principes d’utilisation à l’ULB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html">Boîte à outils de référence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_Jeu_test_de_Turing/Jeu_test_de_Turing.html">Jeu - Test de Turing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_Aller_plus_loin/Aller_plus_loin.html">Aller plus loin</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/5_Points_de_vigilance/Points_de_vigilance.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Points de vigilance</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-pas-des-moteurs-de-recherche">Les outils d’IA générative ne sont pas des moteurs de recherche</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiabilite-des-informations-produites-par-l-ia">Fiabilité des informations produites par l’IA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propriete-intellectuelle-plagiat-et-protection-des-donnees">Propriété intellectuelle, plagiat, et protection des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">Les outils d’IA générative ne sont ni neutres ni objectifs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-environnemental">Impact environnemental</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="points-de-vigilance">
+<h1>Points de vigilance<a class="headerlink" href="#points-de-vigilance" title="Link to this heading">#</a></h1>
+<section id="les-outils-d-ia-generative-ne-sont-pas-des-moteurs-de-recherche">
+<h2>Les outils d’IA générative ne sont pas des moteurs de recherche<a class="headerlink" href="#les-outils-d-ia-generative-ne-sont-pas-des-moteurs-de-recherche" title="Link to this heading">#</a></h2>
+<p>Ils ne sont pas conçus pour fournir des résultats fiables et cohérents. Comme présenté dans la section “Fonctionnement de l’IA générative”, ce sont des outils d’auto-complétion conçus pour produire des contenus statistiquement probables.</p>
+<p>Ces outils peuvent donc inventer des contenus, se contredire, ou produire des contenus incohérents ou bizarres.</p>
+<p>Par exemple, ils peuvent :</p>
+<ul class="simple">
+<li><p>retourner des réponses différentes pour un même prompt. Les réponses à une question peuvent même se contredire. La cause est l’aspect probabiliste dans la génération de la réponse.</p></li>
+<li><p>sembler avoir des opinions, des préférences ou des goûts (comme par exemple préférer la couleur bleue). Ceux-ci ne sont que le reflet des biais présents dans les données d’entraînement.</p></li>
+<li><p>donner de meilleures réponses lorsque l’on demande de réfléchir étape par étape (ou <a class="reference external" href="https://arstechnica.com/information-technology/2023/09/telling-ai-model-to-take-a-deep-breath-causes-math-scores-to-soar-in-study/" title="de respirer un grand coup">de respirer un grand coup</a>). Ceci est une conséquence de l’auto-complétion, par laquelle l’IA générative va tenter de prédire une procédure de résolution qu’elle pourra ensuite prendre en compte pour prédire une réponse.</p></li>
+</ul>
+<p>Plutôt que des outils de recherche d’information, ce sont surtout de bons alliés pour des activités d’exploration d’idées (tout en prenant garde à leurs biais) ou de reformulation.</p>
+</section>
+<section id="fiabilite-des-informations-produites-par-l-ia">
+<h2>Fiabilité des informations produites par l’IA<a class="headerlink" href="#fiabilite-des-informations-produites-par-l-ia" title="Link to this heading">#</a></h2>
+<p>L’IA peut commettre des erreurs et des hallucinations lorsqu’elle produit du contenu. Pour bien comprendre cela, nous t’invitons à lire la section sur le fonctionnement de l’IA :  “<a class="reference external" href="https://uv.ulb.ac.be/course/view.php?id=127533&amp;amp;section=2">Fonctionnement de l’IA générative</a>”.</p>
+<p>Voici des exemples d’incohérences et d’erreurs provenant d’outils d’IA :</p>
+<div style="width: 100%;">
+    <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Présentation des formes basiques" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/675aa6b651a0827adad068f3" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
+</div>
+<p>Cela montre bien que même si les intelligences artificielles peuvent nous aider dans notre pratique professionnelle, il faut toujours vérifier si les informations qu’elles nous transmettent ne sont pas erronées ou biaisées.</p>
+<p>Il faut garder à l’esprit que lorsqu’on utilise une IA, nous restons responsables du travail qui est généré si nous décidons de l’utiliser sans le retravailler et sans vérifier la véracité des informations.</p>
+<p>Ces biais et ces erreurs peuvent avoir de graves conséquences. C’est pourquoi le contrôle humain reste essentiel lors de leurs utilisations.</p>
+</section>
+<section id="propriete-intellectuelle-plagiat-et-protection-des-donnees">
+<h2>Propriété intellectuelle, plagiat, et protection des données<a class="headerlink" href="#propriete-intellectuelle-plagiat-et-protection-des-donnees" title="Link to this heading">#</a></h2>
+<p>Tout comme les réseaux sociaux ou internet en général, les contenus partagés dans une requête faite à un outil d’IA générative ne sont généralement pas confidentiels par défaut. En absence de la connaissance approfondie des conditions d’utilisation, <strong>une information transmise à un outil d’IA générative doit être considérée comme publique</strong>.</p>
+<p>En outre, deux points de vigilance spécifiques aux IA génératives doivent être considérés:</p>
+<ol class="arabic simple">
+<li><p>Souvent, on ne sait pas quelles sont les données d’entrainement d’un modèle, qui peut reproduire des verbatim de contenus protégés. Il est essentiel de toujours remonter aux source primaires, et de <strong>ne pas copier-coller</strong> les réponses fournies par un outil d’IA générative sous peine de pouvoir être accusé de non respect de droit d’auteur ou de plagiat.</p></li>
+<li><p>Inversement, il faut faire attention à toutes les informations que l’on communique dans un chatbot. Les données peuvent servir à l’entrainement. Si celle-ci se retrouvent incluses dans l’entrainement d’un modèle, elle seront quasiment impossible à retirer par la suite.</p></li>
+</ol>
+<p>Le <strong>droit à l’oubli est rendu encore plus difficile à appliquer avec les outils d’IA génératives</strong>. Alors que dans les cas d’Internet ou d’un réseau social, il est possible de faire la demande à un site, un moteur de recherche ou un réseau social de retirer un contenu spécifique, il est techniquement quasiment impossible d’enlever une information spécifique d’un modèle d’IA générative sans en refaire l’entraînement.</p>
+</section>
+<section id="les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">
+<h2>Les outils d’IA générative ne sont ni neutres ni objectifs<a class="headerlink" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs" title="Link to this heading">#</a></h2>
+<p>Leurs productions sont le reflet de leurs données d’entraînement. On retrouve ainsi souvent de nombreux biais liés au genre ou aux origines, qui sont le reflet de biais présents dans les données. En effet, les outils d’IA les plus utilisés actuellement sont conçus par des travailleurs occidentaux, majoritairement masculins et des biais culturels et des biais de genre ressortent suite à cela.</p>
+<p>Il n’est pas toujours possible, ni d’ailleurs nécessairement souhaitable, de retirer les biais d’un outil d’IA générative. Les valeurs morales diffèrent en fonction des individus et des cultures. De même qu’il existe des journaux, des partis, ou des communautés exprimant différents opinions, il est tout aussi souhaitable qu’il existe une diversité d’outils d’IA génératives représentatives de différents systèmes de valeurs.</p>
+<p>En ce sens, le développement d’outils et de modèles d’IA générative open-source est essentiel.</p>
+<div style="width: 100%;">
+    <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Présentation des formes basiques" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/674b7de2593768b5f5a5074c" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
+</div>
+<section id="impact-environnemental">
+<h3>Impact environnemental<a class="headerlink" href="#impact-environnemental" title="Link to this heading">#</a></h3>
+<p>Les outils d’IA générative sont particulièrement gourmands en ressources informatiques. C’est d’ailleurs pour cela que les meilleurs modèles ne sont disponibles qu’en ligne: Ils demandent trop de mémoire et de puissance de calcul pour pouvoir fonctionner sur un laptop ou un smartphone.</p>
+<p>L’impact environnemental est multiple. Il y a un impact du point de vue de la consommation d’énergie pour faire les calculs permettant faire fonctionner ces outils. Ici, il y a deux grandes étapes. La première est l’entraînement d’un modèle, très coûteuse en calcul, mais qui n’est réalisée qu’une fois. La seconde est l’utilisation du modèle, c’est à dire à chaque fois qu’un utilisateur a une interaction avec le modèle. Celle-ci est beaucoup moins coûteuse en énergie, mais au final plus importante que la première si le modèle est utilisé par des millions d’utilisateurs.</p>
+<p><img alt="next_word_prediction" src="../_images/GPT_impact_environnemental.png" /></p>
+<p>Ces tonnes d’équivalent CO2 de pollution environnementale (tCO2eq) peuvent être assez abstraites.</p>
+<p>Pour les comparer à des activités plus tangibles, ce sont chaque mois des dizaines de milliers d’allers-retours en avion entre Paris-New York. <strong>C’est l’utilisation plus que l’entraînement de ces modèles qui a le plus gros impact environnemental, du fait des millions d’utilisateurs</strong>.</p>
+<p>Et plus concrètement encore, quel est le coût environnemental d’une requête GPT par rapport à une recherche Google, ou regarder Netflix?</p>
+<p>La question est assez complexe, et dépend de beaucoup de paramètres comme le type de modèle utilisé, la longueur de la question et de la réponse, et les sources d’énergie utilisées.</p>
+<p>Mais voici quelques ordres de grandeurs utiles à avoir à l’esprit:</p>
+<ul class="simple">
+<li><p>Une recherche sur un outil d’IA générative simple (type GPT-3) est considérée comme <strong>6 à 10 fois plus coûteuse en énergie</strong> qu’une recherche Internet type Google <a class="reference external" href="https://huggingface.co/blog/sasha/ai-environment-primer" title="1">1</a>.</p></li>
+<li><p>Un échange avec un modèle simple type GPT-3 a un impact équivalent à 2g de CO2, soit environ 30 minutes d’éclairage avec une ampoule LED, ou à <strong>environ 3 minutes de vidéo en ligne</strong> <a class="reference external" href="https://www.comparia.beta.gouv.fr/" title="2">2</a>.</p></li>
+</ul>
+<p><img alt="comparatif_CO2_ademe" src="../_images/comparatif_CO2_ademe.jpg" /></p>
+<p>Au delà du coût en énergie pour entraîner et faire fonctionner les modèles d’IA générative, n’oublions pas que cela nécessite de puissants ordinateurs, et donc des matières premières mais aussi à nouveau de l’énergie et également beaucoup d’eau pour construire et faire fonctionner toutes ces machines. Pour en savoir plus sur le sujet, nous t’invitons à regarder cette vidéo.</p>
+<p>Au delà du coût en énergie pour entraîner et faire fonctionner les modèles d’IA générative, n’oublions pas que cela nécessite de puissants ordinateurs, et donc des matières premières mais aussi à nouveau de l’énergie et également beaucoup d’eau pour construire et faire fonctionner toutes ces machines. Pour en savoir plus sur le sujet, nous t’invitons à regarder cette vidéo.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kaZ6zTwVncw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+##### Pistes pour limiter l'impact environnemental de l'IA
+<ul class="simple">
+<li><p><strong>Optimisation des requêtes</strong> : Formuler des requêtes précises et concises pour réduire le temps de calcul et la consommation d’énergie. Cela permet d’éviter de multiplier les prompts, et par la même occasion, la génération de réponse par l’IA.</p></li>
+<li><p><strong>Utiliser des modèles moins coûteux en énergi****e</strong> : plus un modèle est entraîné sur des données nombreuses, plus la génération est coûteuse en énergie. Utiliser des IA avec des modèles moins avancés pour des tâches plus simples peut permettre de réduire l’impact environnemental.</p></li>
+<li><p><strong>Utilisation responsable</strong> : Limiter l’utilisation des outils d’IA générative aux besoins essentiels et éviter les usages superflus qui consomment des ressources inutilement. Garder des moments de réflexion déconnectée. Pour t’aider à déterminer si une tâche nécessite vraiment l’IA ou non, tu peux suivre cet organigramme de décision :</p></li>
+</ul>
+<p><img alt="decision_tree_usage_ia" src="../_images/decision_tree_usage_ia.png" /></p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./5_Points_de_vigilance"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Améliorer ses prompts</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Principes d’utilisation à l’ULB</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-pas-des-moteurs-de-recherche">Les outils d’IA générative ne sont pas des moteurs de recherche</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiabilite-des-informations-produites-par-l-ia">Fiabilité des informations produites par l’IA</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propriete-intellectuelle-plagiat-et-protection-des-donnees">Propriété intellectuelle, plagiat, et protection des données</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">Les outils d’IA générative ne sont ni neutres ni objectifs</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-environnemental">Impact environnemental</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle">Université Libre de Bruxelles - Academ·IA.</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
