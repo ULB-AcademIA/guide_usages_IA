@@ -28,7 +28,7 @@ Le contenu couvre les points suivants:
 
 **Note sur les compétences visées**
 
-NCe guide a été conçu de façon à être aligné avec le référentiel de compétences en IA de l'UNESCO (2024) et le référentiel européen DigComp (2022), pour lesquels nous couvrons une trentaine de compétences, voir le détails dans la section [Compétences](competences).
+Ce guide a été conçu de façon à être aligné avec le référentiel de compétences en IA de l'UNESCO (2024) et le référentiel européen DigComp (2022), pour lesquels nous couvrons une trentaine de compétences, voir le détails dans la section [Compétences](competences).
 
 Notez que le contenu ne prétend pas aborder de manière exhaustive tous les aspects de l'intelligence artificielle, son but étant avant tout de permettre plus particulièrement la découverte de l'IA générative, son potentiel et ses limites, mais aussi les usages académiques possibles. Nous avons ainsi volontairement choisi de ne pas aller trop profondément dans les détails pour que le contenu reste engageant et accessible à tous les apprenants. Des [ressources complémentaires](part9) sont également fournies pour vous permettre d'aller plus loin.
 
@@ -41,7 +41,7 @@ Le guide est en cours de construction. Finalisation prévue pour le 15/02.
 <p>
 <P>
 
-Credit: Dall-E 3 - "Un castor tenant un panneau où il est écrit 'En cours de construction'". Saurez-vous repérez l'erreur?
+Credit: Dall-E 3 - "Un castor tenant un panneau où il est écrit 'En cours de construction'". Sauras-tu repérer l'erreur?
 
 
 
