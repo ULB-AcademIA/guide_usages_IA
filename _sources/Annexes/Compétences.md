@@ -1,4 +1,5 @@
 
+(competences)=
 # Compétences abordées
 
 ## DigComp 2.2 Learning objectives
