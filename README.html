@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/book.css?v=a4d1ce23" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -415,35 +416,43 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="pourquoi-ce-guide">
 <h1>Pourquoi ce guide?<a class="headerlink" href="#pourquoi-ce-guide" title="Link to this heading">#</a></h1>
 <p>Découvre avec ce guide les usages recommandés des outils d’intelligence artificielle générative de type ChatGPT, Copilot et autres assistants IA à l’Université libre de Bruxelles. Le guide a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>.</p>
-<p>Pas sûr si ce guide peut t’être utile? Teste tes connaissances avec le quiz pour le savoir!</p>
+<p><strong>Contenu:</strong></p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#part1"><span class="xref myst">IA générative: Introduction</span></a></p></li>
+<li><p><a class="reference internal" href="#part2"><span class="xref myst">Exemples d’usages</span></a></p></li>
+<li><p><a class="reference internal" href="#part3"><span class="xref myst">Fonctionnement de l’IA générative</span></a></p></li>
+<li><p><a class="reference internal" href="4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html#part4"><span class="std std-ref">Améliorer son prompt</span></a></p></li>
+<li><p><a class="reference internal" href="5_Points_de_vigilance/Points_de_vigilance.html#part5"><span class="std std-ref">Points de vigilance</span></a></p></li>
+<li><p><a class="reference internal" href="6_Principes_utilisation_ULB/Principes_utilisation_ULB.html#part6"><span class="std std-ref">Principes d’utilisation à l’ULB</span></a></p></li>
+<li><p><a class="reference internal" href="7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html#part7"><span class="std std-ref">Boîte à outils de référence</span></a></p></li>
+<li><p><a class="reference internal" href="8_Jeu_test_de_Turing/Jeu_test_de_Turing.html#part8"><span class="std std-ref">Jeu - Test de Turing</span></a></p></li>
+<li><p><a class="reference internal" href="9_Aller_plus_loin/Aller_plus_loin.html#part9"><span class="std std-ref">Aller plus loin</span></a></p></li>
+</ol>
+<!--
+
+
+```{tableofcontents}
+```
+-->
+<p>
+<p>Teste tes connaissances avec le quiz suivants pour savoir quoi regarder en premier!</p>
 <center>
     <div style="width: 100%;">
         <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Teste tes connaissances sur l'IA " frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/675bfde6780f15e3bedbffcf" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
     </div>
 </center>
 <p>
-<p>Le contenu couvre les points suivants:</p>
-<ol class="arabic simple">
-<li><p><a class="reference internal" href="1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html#part1"><span class="std std-ref">IA générative: Introduction</span></a></p></li>
-<li><p>Exemples d’usages</p></li>
-<li><p>Fonctionnement de l’IA générative</p></li>
-<li><p>Rédiger un prompt et usages académiques</p></li>
-<li><p>Points de vigilance</p></li>
-<li><p>Principes d’utilisation à l’ULB</p></li>
-<li><p>Boîte à outils de référence</p></li>
-<li><p>Jeu - Test de Turing</p></li>
-<li><p><a class="reference internal" href="9_Aller_plus_loin/Aller_plus_loin.html#part9"><span class="std std-ref">Aller plus loin</span></a></p></li>
-</ol>
-<p>
 <p><strong>Note sur les compétences visées</strong></p>
 <p>Ce guide a été conçu de façon à être aligné avec le référentiel de compétences en IA de l’UNESCO (2024) et le référentiel européen DigComp (2022), pour lesquels nous couvrons une trentaine de compétences, voir le détails dans la section <a class="reference internal" href="Annexes/Comp%C3%A9tences.html#competences"><span class="std std-ref">Compétences</span></a>.</p>
 <p>Notez que le contenu ne prétend pas aborder de manière exhaustive tous les aspects de l’intelligence artificielle, son but étant avant tout de permettre plus particulièrement la découverte de l’IA générative, son potentiel et ses limites, mais aussi les usages académiques possibles. Nous avons ainsi volontairement choisi de ne pas aller trop profondément dans les détails pour que le contenu reste engageant et accessible à tous les apprenants. Des <a class="reference internal" href="9_Aller_plus_loin/Aller_plus_loin.html#part9"><span class="std std-ref">ressources complémentaires</span></a> sont également fournies pour vous permettre d’aller plus loin.</p>
+<P>
+<p>Credit: Dall-E 3 - “Un castor tenant un panneau où il est écrit ‘En cours de construction’”. Sauras-tu repérer l’erreur?</p>
+<p><strong>Contact</strong></p>
+<p>Pour toute question, envoyez un mail à l’équipe de <a class="reference external" href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle">CeCo·IA</a> (Cellule de Coordination pour l’Intelligence artificielle) de l’ULB à <a class="reference external" href="mailto:cecoia&#37;&#52;&#48;ulb&#46;be">cecoia<span>&#64;</span>ulb<span>&#46;</span>be</a>.</p>
 <p>Le guide est en cours de construction. Finalisation prévue pour le 15/02.</p>
 <p>
 <img src="https://i.ibb.co/C5LVgTq7/beaver.png" alt="beaver"  width="200px">
 <p>
-<P>
-<p>Credit: Dall-E 3 - “Un castor tenant un panneau où il est écrit ‘En cours de construction’”. Sauras-tu repérer l’erreur?</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
