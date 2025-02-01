@@ -18,7 +18,7 @@ Découvre avec ce guide les usages recommandés des outils d'intelligence artifi
 <p>
 
 
-Tu pneses déjà tout savoir? Teste tes connaissances avec ce quiz!
+Tu penses déjà tout savoir sur le sujet? Teste tes connaissances avec ce quiz!
 
 <center>
     <div style="width: 100%;">
