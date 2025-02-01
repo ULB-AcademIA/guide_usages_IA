@@ -1,4 +1,6 @@
-# Pourquoi ce guide?
+# ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB
+
+## Pourquoi ce guide?
 
 Découvre avec ce guide les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, Copilot et autres assistants IA à l'Université libre de Bruxelles. 
 
