@@ -46,8 +46,6 @@ Notez que le contenu ne prétend pas aborder de manière exhaustive tous les asp
 
 <P>
 
-Credit: Dall-E 3 - "Un castor tenant un panneau où il est écrit 'En cours de construction'". Sauras-tu repérer l'erreur?
-
 **Contact**
 
 Pour toute question, envoyez un mail à l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence artificielle) de l'ULB à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
