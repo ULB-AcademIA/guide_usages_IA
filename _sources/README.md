@@ -28,19 +28,9 @@ Tu pneses déjà tout savoir? Teste tes connaissances avec ce quiz!
 
 <p>
 
-
-**Note sur les compétences visées**
-
-Ce guide a été conçu de façon à être aligné avec le référentiel de compétences en IA de l'UNESCO (2024) et le référentiel européen DigComp (2022), pour lesquels nous couvrons une trentaine de compétences, voir le détails dans la section [Compétences](competences).
-
-Le contenu ne prétend pas aborder de manière exhaustive tous les aspects de l'intelligence artificielle. Son but est avant tout de permettre la découverte de l'IA générative, son potentiel et ses limites, mais aussi les usages académiques possibles. Nous avons ainsi volontairement choisi de ne pas aller trop profondément dans les détails pour que le contenu reste engageant et accessible à tous les apprenants. Des [ressources complémentaires](part9) sont fournies pour permettre d'aller plus loin.
-
-<P>
-
 **Contact**
 
-Pour toute question, l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence artificielle de l'ULB) est joignable à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
-
+Pour toute question, n'hésite pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
 
 
 Le guide est en cours de construction. Finalisation prévue pour le 15/02.
