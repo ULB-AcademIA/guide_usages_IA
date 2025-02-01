@@ -1,6 +1,8 @@
 # Pourquoi ce guide?
 
-Découvre avec ce guide les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, Copilot et autres assistants IA à l'Université libre de Bruxelles. Le guide a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>.
+Découvre avec ce guide les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, Copilot et autres assistants IA à l'Université libre de Bruxelles. 
+
+Le guide a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>.
 
 
 **Contenu:**
