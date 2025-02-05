@@ -1,0 +1,57 @@
+
+# Compétences abordées
+
+Ce guide a été conçu en alignement avec le référentiel de compétences en IA de l'UNESCO (2024) et le référentiel européen DigComp 2.2 (2022), en couvrant en tout une trentaine de compétences.
+
+Références:
+
+- [DigComp 2.2 - Référentiel de compétences numériques de la commission européenne (2022)](https://publications.jrc.ec.europa.eu/repository/handle/JRC128415) - Voir pages 78 à 82
+	- https://www.comprendredigcomp.com/index.html
+- [UNESCO – AI Competency Framework for Students (2024)](https://unesdoc.unesco.org/ark:/48223/pf0000391105/PDF/391105eng.pdf.multi)
+
+
+## DigComp 2.2 - Objectifs d'apprentissage
+
+
+
+|Category | Description     | Chapter/Section  |
+| ----------------------  | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+|Generative AI| **AI05**: Aware that AI systems can be used to automatically create digital content (e.g. texts, news, essays, tweets, music, images) and that such content may be difficult to distinguish from human creations ||
+||**AI07**: Aware that AI systems can help the user to edit and process digital content (e.g. some photo editing software uses AI to automatically age a face, while some text applications use AI to suggest words, sentences and paragraphs) ||
+||**AI08**: Aware that some AI systems aim to provide human-like interaction with machines (e.g. conversational agents such as customer service chatbots) ||
+||**AI23**: Aware that AI is a constantly-evolving field, whose development and impact is still very unclear ||
+||**AI29**: Knows how to formulate search queries to achieve the desired output when interacting with conversational agents (e.g. ChatGPT, Dall-E, …) ||
+||**AI50**: Aware that AI algorithms work in ways that are usually not visible or easily understood by users. This is often referred to as “black box” decision-making as it may be impossible to trace back how and why an algorithm makes specific suggestions or predictions ||
+|Misinformation|**AI05**: Aware that AI systems can be used to automatically create digital content (e.g. texts, news, essays, tweets, music, images) using existing digital content as its source. Such content may be difficult to distinguish from human creations. ||
+||**AI38**: Knows how to incorporate AI edited/manipulated digital content in one’s own work (e.g. incorporate AI generated melodies in one’s own musical composition). This use of AI can be controversial as it raises questions about the role of AI in artworks, and for example, who should be credited. ||
+||**AI51**: Knows that the term “deep-fakes” refers to AI-generated images, videos or audio recordings of events or persons that did not really happen (e.g. speeches by politicians, celebrity faces on pornographic imagery). They may be impossible to distinguish from the real thing. ||
+|Bias|**AI49**: Aware that the data, on which AI depends, may include biases. If so, these biases can become automated and worsened by the use of AI. For example, search results about occupation may include stereotypes about male or female jobs (e.g. male bus drivers, female sales persons) ||
+||**AI56**: Aware that AI systems are typically developed by those from narrow demo- graphic backgrounds (e.g. white males from higher-socio economic groups in higher-income countries) which can mean that the systems they develop are less sensitive to the needs of women, people from different ethnic minority groups, lower socio-economic groups, people who require digital accessibility (e.g. with disabilities, functional limitations), or citizens from lower-income countries. ||
+|Data privacy| **AI14**: Weighs the benefits and disadvantages of using AI-driven search engines (e.g. while they might help users find the desired information, they may compromise privacy and personal data, or subject the user to commercial interests).| 5.1, 5.2, 5.3, 5.4 |
+||**AI39**: Knows that the processing of personal data is subject to local regulations such as the EU’s General Data Protection Regulation (GDPR) (e.g. . voice interactions with a virtual assistant are personal data in terms of the GDPR and can expose users to certain data protection, privacy and security risks. ||
+||**AI44**: Identifies both the positive and negative implications of the use of all data (collection, encoding and processing), but especially personal data, by AI-driven digital technologies such as apps and online services. ||
+||**AI45**: Aware that everything that one shares publicly online (e.g. images, videos, sounds) can be used to train AI systems. For example, commercial software companies who develop AI facial recognition systems can use personal images shared online (e.g. family photographs) to train and improve the software’s capability to automatically recognise those persons in other images, which might not be desirable (e.g. might be a breach of privacy). ||
+|Environment|**203**: Aware of the environmental impact of everyday digital practices (e.g. video streaming that rely on data transfer), and that the impact is composed of energy use and carbon emissions from devices, network infrastructure and data centres. ||
+||**AI11**: Aware that digital tools (including AI-driven ones) can contribute to energy efficiency (e.g. through monitoring the need for heating at home and optimising its management) ||
+||**AI57**: Considers the ethical consequences of AI systems throughout their life-cycle: they include both the environmental impact (environmental consequences of the production of digital devices and services) and societal impact (e.g. platformisation of work and algorithmic management that may repress workers’ privacy or rights; the use of low-cost labour for labelling images to train AI systems). ||
+||**AI59**: Aware that certain activities (e.g. training AI and producing cryptocurrencies like Bitcoin) are resource intensive processes in terms of data and computing power. Therefore, energy consumption can be high which can also have a high environmental impact. ||
+
+
+## AI competency framework for students
+
+
+
+[UNESCO – AI Competency Framework for Students (2024)](https://unesdoc.unesco.org/ark:/48223/pf0000391105/PDF/391105eng.pdf.multi)
+
+| Category | Description     | Chapter/Section  |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+|Human-centered mindset | **CG4.1.1.1: Foster an understanding that AI is human-led**: Based on selected AI tools, explain to students that AI is human- led; facilitate students to develop a stepwise and integral comprehension of human agency which may cover principles on data ownership and data privacy, protection of human rights in collecting and processing data, explainability of AI methods, human control in deployment, and human determination in using AI for decision-making. Guide students to understand that AI cannot replace human thinking or intellectual development. | 1, 2, 5, 10 |
+||**CG4.2.1.3 Nurture the personal attitude that human accountability requires personal competencies to steer the purposeful use of AI**: Guide students to interrogate how the automation of literature reviews, writing and artistic creation may undermine human thinking processes and intellectual development. Guide students to discuss concrete actions that they can take to protect themselves and their peers from the use of AI outputs or predictions to usurp human thought, intellectual practices and continuous capacity enhancement. ||
+|AI techniques and applications | **CG4.1.3.2 Develop conceptual knowledge on how AI is trained based on data and algorithms**: Foster students’ example- based abstraction of conceptual knowledge on how machine-learning models are trained using data and algorithms; help students to develop an age-appropriate understanding of the three types of AI algorithms, namely, supervised learning, unsupervised learning and reinforcement learning. This should include how data behind the three types of AI algorithms are acquired and labelled. Debunk the claims that AI will automate the programming of algorithms and that humans do not need to learn about algorithms. ||
+|AI system design |**CG4.1.4.1 Scaffold critical thinking skills on when AI should not be used**: Drawing from examples, guide students to develop critical analysis skills to examine reasons why AI should or should not be used to address certain real-world challenges (e.g. improving institutional productivity, the sustainable development of communities, or the precision and efficiency of human decision-making) with reference to human and environmental implications. Provide clarity on when, and under what conditions, AI cannot and/ or should not be applied to problems (e.g. where non-AI solutions would offer the same performance with lower ethical risk and environmental impact, or where the use of AI would weaken human consciousness or manipulate human actions). ||
+||**CG4.3.4.1 Develop the skills to critique AI systems**: Provide project-based learning opportunities for students to practise skills in critically testing the technological robustness and critiquing the ethical appropriateness of an AI system through auditing whether the model enhances human capacities, agency and consciousness, or weakens them; checking the extent of its explainability and protection of data privacy; measuring the performance of the AI system; and studying users’ feedback to evaluate its broader societal and environmental impact. ||
+|Ethics of AI |**CG4.2.2.2 Offer opportunities to reinforce self-discipline in the responsible use of AI**: Provide students with opportunities to gain an age-appropriate understanding of their personal, legal and ethical responsibilities when using AI; highlight the consequences of violating regulations; and build and reinforce self-disciplined behaviours, especially with regard to sensitive personal data, copyrighted materials, images depicting identifiable people, content that is AI-generated or digitally synthetized, and the spread of misinformation, disinformation and hate speech.  ||
+||**CG4.2.2.3 Deepen practical knowledge on the safe use of AI and awareness of locally applicable regulations**: Facilitate students to categorize the general safety risks of AI, potential safety risks of specific AI tools, and typical AI incidents. Guide students to deepen their knowledge on human rights to data protection and privacy and the legal responsibilities of AI creators to collect data with consent, and guide them to practise strategies for ensuring their personal data is collected, used, shared, archived and deleted only with their informed consent. ||
+
+
+
