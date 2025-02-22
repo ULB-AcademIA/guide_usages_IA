@@ -81,7 +81,7 @@ Le site [Compar:IA](https://www.comparia.beta.gouv.fr/) te donne quelques élém
 
 Un exemple ici de l'impact énergétique d'une petite conversation avec le modèle Google Gemini 2.0 Flash (un modèle de taille moyenne):
 
-![comparia](attachments/comparia.png)
+<a href="https://www.comparia.beta.gouv.fr/" target="_blank"><img src="./attachments/comparia.png"/></a>
 
 Le site te donne aussi une idée de l'impact environnemental équivalent en terme de visionnage de vidéo en ligne (approximatif), qui est aussi une activité très consommatrice en énergie.
 
@@ -89,7 +89,7 @@ Au-delà de l'impact environnemental de l'IA, c'est plus largement nos usages et
 
 De nombreuses organisations comme l’ADEME considère ainsi qu’il faut raisonner en termes de [**sobriété numérique**](https://www.ademe.fr/presse/communique-national/numerique-environnement-entre-opportunites-et-necessaire-sobriete/), en questionnant, priorisant et in fine réduisant certains usages numériques. 
 
-![alt_impact](attachments/alt_impact.png)
+<a href="https://altimpact.fr/" target="_blank"><img src="./attachments/alt_impact.png"/></a>
 
 Eviter d'avoir recours à l'IA générative fait ainsi partie des pratiques à impact très fort mises en avant par le programme [Alt Impact](https://altimpact.fr/), qui propose les alternatives suivantes à l’IA générative:
 
