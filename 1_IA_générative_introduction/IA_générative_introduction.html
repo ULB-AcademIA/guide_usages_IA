@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. IA générative: Introduction &#8212; ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB</title>
+    <title>1. IA générative: Introduction &#8212; ChatGPT, Copilot et autres IA génératives : Guide des usages à l’ULB</title>
   
   
   
@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -65,9 +68,10 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Exemples d’usages" href="../2_Exemples_usage/Exemples_usage.html" />
-    <link rel="prev" title="ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB" href="../README.html" />
+    <link rel="prev" title="ChatGPT, Copilot et autres IA génératives: Guide des usages à l’ULB" href="../README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -157,29 +150,25 @@
       
     
     
-    <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB - Home"/>
-    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB - Home"/>`);</script>
+    <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="ChatGPT, Copilot et autres IA génératives : Guide des usages à l’ULB - Home"/>
+    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="ChatGPT, Copilot et autres IA génératives : Guide des usages à l’ULB - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../README.html">
-                    ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB
+                    ChatGPT, Copilot et autres IA génératives: Guide des usages à l’ULB
                 </a>
             </li>
         </ul>
@@ -198,6 +187,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Annexes/Comp%C3%A9tences.html">Compétences abordées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Annexes/Ressources.html">Ressources</a></li>
 </ul>
 
     </div>
@@ -206,9 +196,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -369,24 +364,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -443,11 +430,11 @@ document.write(`
 <h2><span class="section-number">1.2. </span>Exemples<a class="headerlink" href="#exemples" title="Link to this heading">#</a></h2>
 <p>Voyons quelques exemples avec l’outil Microsoft Copilot, qui est l’outil d’IA générative de référence proposé par Microsoft.</p>
 <p><strong>Note</strong>: <strong>Microsoft Copilot est l’outil à privilégier à l’ULB</strong> car c’est le seul qui garantit la confidentialité et la propriété des données transmises ou produites grâce au contrat qui lie Microsoft à l’ULB. De nombreux autres outils d’IA génératives existent, en particulier open-source, voir la section “Boîte à outils de référence”.</p>
-<p>Microsoft Copilot est accessible à l’adresse <a class="reference external" href="https://copilot.cloud.microsoft/">https://copilot.cloud.microsoft/</a>, où tu pourras t’y connecter avec ton adresse email ULB. Le logo de l’ULB doit alors apparaître en haut à gauche de l’écran et le logo d’un bouclier vert en haut à droite confirme que vos conversations sont protégées.</p>
+<p>Microsoft Copilot est accessible à l’adresse <a class="reference external" href="https://copilot.cloud.microsoft/">https://copilot.cloud.microsoft/</a>, où tu pourras t’y connecter avec ton adresse email ULB. Le pictogramme d’un bouclier vert doit être présent en haut à droite pour confirmer que tes conversations sont protégées.</p>
 <section id="generation-de-texte">
 <h3><span class="section-number">1.2.1. </span>Génération de texte<a class="headerlink" href="#generation-de-texte" title="Link to this heading">#</a></h3>
 <p>Voici ci-dessous un échange avec Copilot, demandant de générer des paroles d’une chanson sur le thème du libre examen dans un style hip-hop.</p>
-<p><img alt="copilot_example_gpt4" src="../_images/copilot_example_gpt4.jpg" />
+<p><img alt="copilot_example_gpt4" src="../_images/copilot_example_gpt5.png" />
 Pas si mal !</p>
 <p>Que s’est-il passé dans cet échange ?</p>
 <ul class="simple">
@@ -455,14 +442,14 @@ Pas si mal !</p>
 <li><p>GPT-4 est développé par OpenAI, la société américaine qui commercialise aussi ChatGPT.</p></li>
 <li><p><strong>Il est important de distinguer le modèle de l’interface utilisateur</strong>. Ici, l’interface utilisateur est celle de Microsoft, qui offre des fonctionnalités pratiques comme le fait de fournir des suggestions pour continuer les échanges, ou d’aller chercher du contenu sur Internet. Le coeur de la génération de texte est cependant le modèle GPT-4 (qui est aussi celui derrière l’outil ChatGPT d’OpenAI) qui n’a pas accès à Internet, et ne fait que prédire les mots suivants comme un outil d’auto-complétion.</p></li>
 </ul>
-<p>Pour plus d’explications sur ce que font réellement les modèles de langage comme GPT-4, rendez-vous sur la capsule “Comment ça marche?” !</p>
+<p>Pour plus d’explications sur ce que font réellement les modèles de langage comme GPT-4, rends-toi sur la capsule “Comment ça marche?” !</p>
 </section>
 <section id="generation-d-images">
 <h3><span class="section-number">1.2.2. </span>Génération d’images<a class="headerlink" href="#generation-d-images" title="Link to this heading">#</a></h3>
 <p>L’interface utilisateur Copilot permet aussi de générer des images. Lorsque l’on entre un prompt demandant la création d’une image, c’est alors un autre modèle qui est appelé. Ce modèle s’appelle <a class="reference external" href="https://openai.com/index/dall-e-3/">DALL-E 3</a>, qui est aussi développé par OpenAI.</p>
 <p>Le modèle renvoie à Copilot l’image (ou les images) générées.</p>
 <p>Ici, nous avons demandé de générer des illustrations, dans un style art-nouveau, de Pierre-Théodore Verhaegen en train de rapper sur la place Flagey.</p>
-<p><img alt="copilot_example_dalle3" src="../_images/copilot_example_dalle3.jpg" /></p>
+<p><img alt="copilot_example_dalle3" src="../_images/copilot_example_dalle4.png" /></p>
 <p>On note dans ces propositions la présence d’un style art-nouveau. En revanche, Flagey n’y est pas spécialement reconnaissable, à l’instar du <a class="reference external" href="https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen" title="https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen">fondateur de l’ULB</a>.</p>
 <p>Cet exemple illustre un point essentiel des IA génératives : si elles peuvent se révéler assez efficaces d’un point de vue créatif, elles ne sont cependant pas conçues pour générer des contenus factuellement corrects.</p>
 </section>
@@ -525,7 +512,7 @@ Pas si mal !</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB</p>
+        <p class="prev-next-title">ChatGPT, Copilot et autres IA génératives: Guide des usages à l’ULB</p>
       </div>
     </a>
     <a class="right-next"
@@ -544,7 +531,8 @@ Pas si mal !</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -609,8 +597,8 @@ Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/b
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

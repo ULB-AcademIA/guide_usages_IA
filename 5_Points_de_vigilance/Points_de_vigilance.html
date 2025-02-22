@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>5. Points de vigilance &#8212; ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB</title>
+    <title>5. Points de vigilance &#8212; ChatGPT, Copilot et autres IA génératives : Guide des usages à l’ULB</title>
   
   
   
@@ -16,17 +16,19 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
@@ -37,10 +39,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -68,6 +71,7 @@
     <link rel="prev" title="4. Améliorer ses prompts" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -83,19 +87,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -103,7 +96,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -111,8 +103,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -128,7 +120,8 @@
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -157,29 +150,25 @@
       
     
     
-    <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB - Home"/>
-    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB - Home"/>`);</script>
+    <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="ChatGPT, Copilot et autres IA génératives : Guide des usages à l’ULB - Home"/>
+    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="ChatGPT, Copilot et autres IA génératives : Guide des usages à l’ULB - Home"/>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script></div>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../README.html">
-                    ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB
+                    ChatGPT, Copilot et autres IA génératives: Guide des usages à l’ULB
                 </a>
             </li>
         </ul>
@@ -198,6 +187,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../Annexes/Comp%C3%A9tences.html">Compétences abordées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Annexes/Ressources.html">Ressources</a></li>
 </ul>
 
     </div>
@@ -206,9 +196,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -369,24 +364,16 @@
 
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
 
 
-<script>
-document.write(`
-  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-  </button>
-`);
-</script>
+</button>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -413,10 +400,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-pas-des-moteurs-de-recherche">5.1. Les outils d’IA générative ne sont pas des moteurs de recherche</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiabilite-des-informations-produites-par-l-ia">5.2. Fiabilité des informations produites par l’IA</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propriete-intellectuelle-plagiat-et-protection-des-donnees">5.3. Propriété intellectuelle, plagiat, et protection des données</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">5.4. Les outils d’IA générative ne sont ni neutres ni objectifs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-environnemental">5.4.1. Impact environnemental</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">5.4. Les outils d’IA générative ne sont ni neutres ni objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-environnemental">5.5. Impact environnemental</a></li>
 </ul>
             </nav>
         </div>
@@ -471,32 +456,32 @@ document.write(`
 <div style="width: 100%;">
     <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Présentation des formes basiques" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/674b7de2593768b5f5a5074c" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
 </div>
-<section id="impact-environnemental">
-<h3><span class="section-number">5.4.1. </span>Impact environnemental<a class="headerlink" href="#impact-environnemental" title="Link to this heading">#</a></h3>
-<p>Les outils d’IA générative sont particulièrement gourmands en ressources informatiques. C’est d’ailleurs pour cela que les meilleurs modèles ne sont disponibles qu’en ligne: Ils demandent trop de mémoire et de puissance de calcul pour pouvoir fonctionner sur un laptop ou un smartphone.</p>
-<p>L’impact environnemental est multiple. Il y a un impact du point de vue de la consommation d’énergie pour faire les calculs permettant faire fonctionner ces outils. Ici, il y a deux grandes étapes. La première est l’entraînement d’un modèle, très coûteuse en calcul, mais qui n’est réalisée qu’une fois. La seconde est l’utilisation du modèle, c’est à dire à chaque fois qu’un utilisateur a une interaction avec le modèle. Celle-ci est beaucoup moins coûteuse en énergie, mais au final plus importante que la première si le modèle est utilisé par des millions d’utilisateurs.</p>
-<p><img alt="next_word_prediction" src="../_images/GPT_impact_environnemental.png" /></p>
-<p>Ces tonnes d’équivalent CO2 de pollution environnementale (tCO2eq) peuvent être assez abstraites.</p>
-<p>Pour les comparer à des activités plus tangibles, ce sont chaque mois des dizaines de milliers d’allers-retours en avion entre Paris-New York. <strong>C’est l’utilisation plus que l’entraînement de ces modèles qui a le plus gros impact environnemental, du fait des millions d’utilisateurs</strong>.</p>
-<p>Et plus concrètement encore, quel est le coût environnemental d’une requête GPT par rapport à une recherche Google, ou regarder Netflix?</p>
-<p>La question est assez complexe, et dépend de beaucoup de paramètres comme le type de modèle utilisé, la longueur de la question et de la réponse, et les sources d’énergie utilisées.</p>
-<p>Mais voici quelques ordres de grandeurs utiles à avoir à l’esprit:</p>
-<ul class="simple">
-<li><p>Une recherche sur un outil d’IA générative simple (type GPT-3) est considérée comme <strong>6 à 10 fois plus coûteuse en énergie</strong> qu’une recherche Internet type Google <a class="reference external" href="https://huggingface.co/blog/sasha/ai-environment-primer" title="1">1</a>.</p></li>
-<li><p>Un échange avec un modèle simple type GPT-3 a un impact équivalent à 2g de CO2, soit environ 30 minutes d’éclairage avec une ampoule LED, ou à <strong>environ 3 minutes de vidéo en ligne</strong> <a class="reference external" href="https://www.comparia.beta.gouv.fr/" title="2">2</a>.</p></li>
-</ul>
-<p><img alt="comparatif_CO2_ademe" src="../_images/comparatif_CO2_ademe.jpg" /></p>
-<p>Au delà du coût en énergie pour entraîner et faire fonctionner les modèles d’IA générative, n’oublions pas que cela nécessite de puissants ordinateurs, et donc des matières premières mais aussi à nouveau de l’énergie et également beaucoup d’eau pour construire et faire fonctionner toutes ces machines. Pour en savoir plus sur le sujet, nous t’invitons à regarder cette vidéo.</p>
-<p>Au delà du coût en énergie pour entraîner et faire fonctionner les modèles d’IA générative, n’oublions pas que cela nécessite de puissants ordinateurs, et donc des matières premières mais aussi à nouveau de l’énergie et également beaucoup d’eau pour construire et faire fonctionner toutes ces machines. Pour en savoir plus sur le sujet, nous t’invitons à regarder cette vidéo.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kaZ6zTwVncw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-##### Pistes pour limiter l'impact environnemental de l'IA
-<ul class="simple">
-<li><p><strong>Optimisation des requêtes</strong> : Formuler des requêtes précises et concises pour réduire le temps de calcul et la consommation d’énergie. Cela permet d’éviter de multiplier les prompts, et par la même occasion, la génération de réponse par l’IA.</p></li>
-<li><p>**Utiliser des modèles moins coûteux en énergie : plus un modèle est entraîné sur des données nombreuses, plus la génération est coûteuse en énergie. Utiliser des IA avec des modèles moins avancés pour des tâches plus simples peut permettre de réduire l’impact environnemental.</p></li>
-<li><p><strong>Utilisation responsable</strong> : Limiter l’utilisation des outils d’IA générative aux besoins essentiels et éviter les usages superflus qui consomment des ressources inutilement. Garder des moments de réflexion déconnectée. Pour t’aider à déterminer si une tâche nécessite vraiment l’IA ou non, tu peux suivre cet organigramme de décision :</p></li>
-</ul>
-<p><img alt="decision_tree_usage_ia" src="../_images/decision_tree_usage_ia.png" /></p>
 </section>
+<section id="impact-environnemental">
+<h2><span class="section-number">5.5. </span>Impact environnemental<a class="headerlink" href="#impact-environnemental" title="Link to this heading">#</a></h2>
+<p>Les outils d’IA générative sont particulièrement gourmands en ressources informatiques. C’est d’ailleurs pour cela que les meilleurs modèles ne sont disponibles qu’en ligne: Ils demandent trop de mémoire et de puissance de calcul pour pouvoir fonctionner sur un laptop ou un smartphone.</p>
+<p>Sous le capot de l’IA se trouvent des processeurs spécialisés, le plus souvent des cartes appelées <strong>GPU</strong> (pour Graphical Processing Unit, en anglais). Il s’agit de processeurs de calcul particulièrement chers et grands consommateurs en énergie.</p>
+<p>Ci-dessous est illustré une carte GPU typique (Nvidia H100, dont le prix avoisine les 25000 euros) de celles utilisées pour l’entraînement et l’utilisation des modèles de prédiction d’IA. Elles sont conçues par le fabricant Nvidia, qui est le leader mondial du marché et qui est devenu en quelques années l’une des entreprises les plus riches du monde du fait de l’explosion de l’usage de ces cartes dans les applications d’intelligence artificielle.</p>
+<p>Les nouveaux centres de données de type <a class="reference external" href="https://fr.wikipedia.org/wiki/Hyperscale">hyperscale</a> tels que celui de Google à Saint Ghislain en Wallonie accueillent entre autre les infrastructures nécessaires pour satisfaire la demande exponentielle des applications liées à l’IA.</p>
+<p><img alt="gpu_and_data_centers" src="../_images/gpu_and_data_centers.png" /></p>
+<p>🏭  L’évolution rapide de l’IA rend difficile l’obtention de chiffres précis sur l’impact environnemental de l’IA générative. Les rapports environnementaux des GAFAM de 2023 révèlent cependant clairement l’ampleur de son impact sur l’environnement comme le souligne le site <a class="reference external" href="https://altimpact.fr/bonnes-pratiques/eviter-le-recours-a-lia-generative/">Alt Impact de l’Ademe</a>: Microsoft a ainsi vu ses émissions de carbone augmenter de 30 % depuis 2020, tandis que Google a enregistré une hausse de 48 % depuis 2019.</p>
+<p>💧 Plus proche de chez nous, concernant la consommation d’eau, le <a class="reference external" href="https://sustainability.google/reports/google-2024-environmental-report/">rapport environnemental de Google 2024</a> précise que le centre de données de Saint Ghislain en Belgique près de Mons consomme annuellement environ un million de mètres cubes d’eau pour empêcher la surchauffe de ses serveurs, dont la majeure partie s’évapore. Ceci équivaut à la consommation annuelle d’environ 10 000 ménages de la région.</p>
+<p>⚡ Et pour l’énergie, le fonctionnement d’un outil comme ChatGPT requièrent plusieurs cartes GPUs de type H100, dont la consommation d’énergie équivaut à chauffer une maison. A la place d’une maison, ce sont ici de puissants GPUs dans un centre de données qui chauffent, et nécessitent ensuite l’eau dont nous venons de parler pour être refroidis. La consommation de ce type de cartes GPUs en 2027 <a class="reference external" href="https://altimpact.fr/bonnes-pratiques/eviter-le-recours-a-lia-generative/">pourrait atteindre 135TWh</a>, soit la production d’environ 20 centrales nucléaires de type <a class="reference external" href="https://en.wikipedia.org/wiki/Three_Mile_Island_Nuclear_Generating_Station">Three Mile Island</a>, telle que celle que Microsoft envisage de réouvrir en 2028 pour ses besoins en IA.</p>
+<p><img alt="nuclear_plant" src="../_images/nuclear_plant.png" /></p>
+<p>Et individuellement, comment peux-tu estimer le coût environnemental d’une conversation avec ton chatbot favori?</p>
+<p>Le site <a class="reference external" href="https://www.comparia.beta.gouv.fr/">Compar:IA</a> te donne quelques éléments d’information, et cela dépend du type de modèle utilisé, de la longueur de la question et de la réponse, et des sources d’énergie utilisées. <a class="reference external" href="https://www.comparia.beta.gouv.fr/">Teste-le et compare</a> les réponses de différents chatbots et leurs impacts environnementaux.</p>
+<p>Un exemple ici de l’impact énergétique d’une petite conversation avec le modèle Google Gemini 2.0 Flash (un modèle de taille moyenne):</p>
+<p><img alt="comparia" src="../_images/comparia.png" /></p>
+<p>Le site te donne aussi une idée de l’impact environnemental équivalent en terme de visionnage de vidéo en ligne (approximatif), qui est aussi une activité très consommatrice en énergie.</p>
+<p>Au-delà de l’impact environnemental de l’IA, c’est plus largement nos usages et notre dépendance au numérique (dont l’IA n’est qu’une composante) qu’il est aussi intéressant de questionner: Avons-nous réellement besoin de ce nouveau téléphone ou gadget? Besoin de ChatGPT pour écrire un message? Besoin de parler à son frigo plutôt qu’ouvrir la porte pour voir ce qu’il y a dedans? Besoin d’aller sur Insta toutes les 10 minutes pour voir qui a liké ma story?</p>
+<p>De nombreuses organisations comme l’ADEME considère ainsi qu’il faut raisonner en termes de <a class="reference external" href="https://www.ademe.fr/presse/communique-national/numerique-environnement-entre-opportunites-et-necessaire-sobriete/"><strong>sobriété numérique</strong></a>, en questionnant, priorisant et in fine réduisant certains usages numériques.</p>
+<p><img alt="alt_impact" src="../_images/alt_impact.png" /></p>
+<p>Eviter d’avoir recours à l’IA générative fait ainsi partie des pratiques à impact très fort mises en avant par le programme <a class="reference external" href="https://altimpact.fr/">Alt Impact</a>, qui propose les alternatives suivantes à l’IA générative:</p>
+<ol class="arabic simple">
+<li><p><strong>Préférer les moteurs de recherches à l’IA générative</strong> lorsqu’ils peuvent offrir le même service. Il vaut mieux effectuer une recherche internet ou utiliser Wikipédia plutôt que d’interroger ChatGPT ou toutes autres IA génératives. Par exemple, pour des questions factuelles comme « Quelle est la capitale du Cambodge ? », Wikipédia sera plus efficace que d’interroger l’IA… Et si c’est vraiment inévitable, allez droit au but : exit les conversations superflues ! Préférer aussi les moteurs comme DuckDuckGo plutôt que Google ou Bing qui intègre maintenant l’IA générative dans leur réponse (et sont moins respectueux de vos données personnelles).</p></li>
+<li><p><strong>Privilégier une IA spécifique (traduction, orthographe)</strong> plutôt qu’une IA générative, cela consommera beaucoup moins d’énergie. Exemple pour de la traduction, privilégier DeepL ou un site de dictionnaire comme “WordRéférence” pour chercher un mot en particulier plutôt que des IA conversationnelles.</p></li>
+<li><p><strong>Eviter autant que possible le recours à l’IA générative pour générer des images ou des vidéos</strong>. Oui c’est amusant… mais son coût environnemental est salé. Les études montrent que générer une image ou encore une vidéo avec l’IA consomme bien plus d’énergie que de créer du texte, et qu’en plus, il y a souvent plus de déchets dans le processus… Dans la mesure du possible, utiliser des images déjà existantes provenant de banques d’images libres de droit.</p></li>
+</ol>
 </section>
 </section>
 
@@ -555,7 +540,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -567,10 +553,8 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-pas-des-moteurs-de-recherche">5.1. Les outils d’IA générative ne sont pas des moteurs de recherche</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fiabilite-des-informations-produites-par-l-ia">5.2. Fiabilité des informations produites par l’IA</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propriete-intellectuelle-plagiat-et-protection-des-donnees">5.3. Propriété intellectuelle, plagiat, et protection des données</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">5.4. Les outils d’IA générative ne sont ni neutres ni objectifs</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-environnemental">5.4.1. Impact environnemental</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-d-ia-generative-ne-sont-ni-neutres-ni-objectifs">5.4. Les outils d’IA générative ne sont ni neutres ni objectifs</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impact-environnemental">5.5. Impact environnemental</a></li>
 </ul>
   </nav></div>
 
@@ -618,8 +602,8 @@ Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/b
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

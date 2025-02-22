@@ -1,4 +1,4 @@
-# ChatGPT, Copilot et autres assistants IA : Guide des usages à l’ULB
+# ChatGPT, Copilot et autres IA génératives: Guide des usages à l’ULB
 
 ## Pourquoi ce guide?
 
