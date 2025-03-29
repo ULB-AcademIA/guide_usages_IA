@@ -17,6 +17,13 @@
 - https://cafeia.org/
 
 
+## Blogs
+
+
+- https://danslesalgorithmes.net/
+
+
+
 ## Cours
 
 - Destiné aux étudiant·es des différents masters de la HES-SO (Suisse), Richard-Emmanuel Eastes - IA générative: https://www.youtube.com/watch?v=PXqMH75rQQ0&list=PLZ5Ri5aSowtukezIs1Bg8u8pQrrd5VprV - https://numerique.hes-so.ch/course/view.php?id=254
@@ -51,6 +58,10 @@ Environnement:
 - [The Environmental Impacts of AI -- Primer](https://huggingface.co/blog/sasha/ai-environment-primer) - Luccioni et al., 09/24
 - [MOOC numérique responsable - ISIT](https://www.academie-nr.org)
 - [Data for good report](https://dataforgood.fr/iagenerative/)- 2023
+- https://www.polehainuyer.be/app/uploads/2024/11/PH-FP24-Atelier-2-Impact-environnemental-de-lIA.pdf
+- https://altimpact.fr/
+
+
 
 
 ## Outils
@@ -62,3 +73,14 @@ Environnement:
 ## Aller plus loin
 
 - https://dataforgood.fr/iagenerative/
+- https://framamia.org/en/
+- https://developmentalsystems.org/chatgpt_5_minutes/fr/
+- https://cafeia.org/je-me-forme-a-lia/
+- L’IA pour les enseignants : un manuel ouvert : https://aiopentext.itd.cnr.it/iapourlesenseignants/front-matter/33/
+
+
+
+
+
+
+

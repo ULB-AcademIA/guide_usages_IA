@@ -1,0 +1,636 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Avant l’IA Générative… Il y avait l’IA tout court ! Une Brève Histoire (et quelques jeux) &#8212; L&#39;intelligence artificielle générative à l’ULB</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '0_Intro/Intro';</script>
+    <script src="../_static/gtag_0.js?v=8aa108c4"></script>
+    <script src="../_static/gtag_1.js?v=fd68456f"></script>
+    <link rel="icon" href="../_static/IA.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. IA générative: Introduction" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html" />
+    <link rel="prev" title="L’intelligence artificielle générative à l’ULB" href="../README.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    L’intelligence artificielle générative à l’ULB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenu</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Avant l’IA Générative… Il y avait l’IA tout court ! Une Brève Histoire (et quelques jeux)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html">2. IA générative: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Exemples_usage/Exemples_usage.html">3. Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Comment_ca_marche/Comment_ca_marche.html">4. Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">5. Améliorer ses prompts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Points_de_vigilance/Points_de_vigilance.html">6. Points de vigilance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html">7. Principes d’utilisation à l’ULB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html">8. Boîte à outils de référence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_Jeu_test_de_Turing/Jeu_test_de_Turing.html">9. Jeu - Test de Turing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../9_Aller_plus_loin/Aller_plus_loin.html">10. Aller plus loin</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Annexes/Comp%C3%A9tences.html">Compétences abordées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Annexes/Ressources.html">Ressources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ULB-AcademIA/guide_usages_IA" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ULB-AcademIA/guide_usages_IA/edit/main/0_Intro/Intro.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ULB-AcademIA/guide_usages_IA/issues/new?title=Issue%20on%20page%20%2F0_Intro/Intro.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/0_Intro/Intro.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Avant l’IA Générative… Il y avait l’IA tout court ! Une Brève Histoire (et quelques jeux)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="avant-l-ia-generative-il-y-avait-l-ia-tout-court-une-breve-histoire-et-quelques-jeux">
+<h1><span class="section-number">1. </span>Avant l’IA Générative… Il y avait l’IA tout court ! Une Brève Histoire (et quelques jeux)<a class="headerlink" href="#avant-l-ia-generative-il-y-avait-l-ia-tout-court-une-breve-histoire-et-quelques-jeux" title="Link to this heading">#</a></h1>
+<p>(Bloc d’Introduction - Texte &amp; Image)</p>
+<p>Bonjour et bienvenue dans ce module d’introduction ! Avant de nous focaliser sur les outils génératifs (ChatGPT, Midjourney &amp; co) qui font tant parler d’eux, faisons un petit pas en arrière. L’Intelligence Artificielle, ou IA, n’est pas née hier ! C’est un domaine fascinant, riche en idées folles, en avancées spectaculaires, et même en quelques “traversées du désert”.</p>
+<p>Ce module “zéro” est là pour :</p>
+<ul class="simple">
+<li><p>Vous donner une <strong>vue d’ensemble</strong> de ce qu’est l’IA.</p></li>
+<li><p>Vous faire voyager à travers quelques <strong>dates et faits marquants</strong> de son histoire.</p></li>
+<li><p>Vous faire <strong>jouer un peu</strong> avec des concepts clés de l’IA de manière interactive.</p></li>
+<li><p>Piquer votre <strong>curiosité</strong> et vous montrer que l’IA est déjà partout autour de nous !</p></li>
+</ul>
+<p>Accrochez-vous, on remonte le temps et on explore les fondations ! 🕰️✨</p>
+<p><strong>Suggestion d’Illustration :</strong><br />
+Une image stylisée combinant des éléments “anciens” (engrenages, cerveau façon dessin anatomique) et “modernes” (circuits imprimés, réseaux neuronaux lumineux). Ou un personnage ouvrant une porte marquée “IA” pour révéler un paysage futuriste mais ancré dans une histoire.</p>
+<hr class="docutils" />
+<p><strong>(Bloc Contenu - Qu’est-ce que l’IA ?)</strong></p>
+<p><strong>Titre :</strong> L’IA : Plus qu’un Robot qui Parle dans les Films ? 🤖🤔</p>
+<p><strong>Texte :</strong><br />
+Oubliez (pour l’instant !) les robots humanoïdes de la science-fiction qui veulent conquérir le monde. Dans la réalité, l’IA est un vaste domaine de l’informatique qui vise à créer des machines ou des programmes capables de réaliser des tâches qui nécessiteraient normalement l’intelligence humaine.</p>
+<p>Quelles tâches ? Par exemple :</p>
+<ul class="simple">
+<li><p><strong>Apprendre</strong> à partir de données (comme reconnaître des chats sur des photos).</p></li>
+<li><p><strong>Raisonner</strong> et résoudre des problèmes (comme trouver le meilleur itinéraire sur une carte).</p></li>
+<li><p><strong>Percevoir</strong> le monde (comme comprendre ce que vous dites à votre assistant vocal).</p></li>
+<li><p><strong>Interagir</strong> en langage naturel (comme… eh bien, ChatGPT !).</p></li>
+</ul>
+<p><strong>Analogie Simple :</strong> Pensez à l’IA comme à une <strong>boîte à outils géante</strong> remplie d’instruments différents. Certains sont très spécialisés (comme un tournevis de précision - une IA qui détecte les spams), d’autres sont plus polyvalents (comme un couteau suisse - un assistant vocal). L’IA générative est l’un des outils les plus récents et les plus impressionnants de cette boîte.</p>
+<p><strong>Le Saviez-Vous ?</strong> L’IA est déjà très présente dans notre quotidien :</p>
+<ul class="simple">
+<li><p>Les <strong>recommandations</strong> de films ou de produits sur Netflix ou Amazon.</p></li>
+<li><p>Les <strong>filtres anti-spam</strong> de votre boîte mail.</p></li>
+<li><p>Les <strong>assistants vocaux</strong> (Siri, Alexa, Google Assistant).</p></li>
+<li><p>La <strong>reconnaissance faciale</strong> pour déverrouiller votre smartphone.</p></li>
+<li><p>Les <strong>aides à la conduite</strong> dans les voitures modernes.<br />
+… et bien plus encore !</p></li>
+</ul>
+<p><strong>Suggestion d’Illustration :</strong><br />
+Une infographie simple montrant des icônes des exemples d’IA du quotidien (logo Netflix, icône email/spam, micro, visage, voiture).</p>
+<hr class="docutils" />
+<p><strong>(Bloc Contenu - Chronologie &amp; Anecdotes)</strong></p>
+<p><strong>Titre :</strong> Voyage dans le Temps de l’IA : Quelques Étapes Clés ⏳</p>
+<p><strong>Texte :</strong><br />
+L’IA a une histoire riche, avec des hauts et des bas. Voici quelques dates et anecdotes pour vous donner une idée :</p>
+<ul class="simple">
+<li><p><strong>1950 : Le Test de Turing.</strong> Le mathématicien britannique Alan Turing propose un “jeu de l’imitation”. L’idée : une machine peut-elle converser (par écrit) de manière si convaincante qu’un humain ne puisse pas la distinguer d’une autre personne ? Ce test iconique pose la question fondamentale : une machine peut-elle “penser” ?</p>
+<ul>
+<li><p>Anecdote : Turing était aussi un héros de la Seconde Guerre mondiale, ayant joué un rôle crucial dans le décryptage de la machine Enigma allemande !</p></li>
+</ul>
+</li>
+<li><p><strong>1956 : La Naissance Officielle.</strong> Le terme “Intelligence Artificielle” est inventé lors d’un atelier d’été au Dartmouth College (USA). L’ambiance est à l’optimisme débordant !</p></li>
+<li><p><strong>Années 60-70 : Premiers Succès &amp; Hype.</strong> Des programmes capables de résoudre des problèmes logiques simples, de jouer aux dames… mais les promesses sont parfois exagérées.</p></li>
+<li><p><strong>Années 70-80 : Le Premier “Hiver de l’IA”.</strong> Déception face aux limites des machines de l’époque et aux problèmes plus complexes que prévu. Les financements diminuent. Brrr… ❄️</p></li>
+<li><p><strong>Années 80 : Le Boom des “Systèmes Experts”.</strong> Des IA spécialisées dans un domaine précis (diagnostic médical, configuration informatique) connaissent un succès commercial.</p></li>
+<li><p><strong>1997 : Deep Blue Bat Kasparov.</strong> L’ordinateur d’IBM bat le champion du monde d’échecs Garry Kasparov. Un choc symbolique ! L’IA peut-elle surpasser l’humain dans des domaines stratégiques complexes ?</p>
+<ul>
+<li><p>Anecdote : Kasparov était persuadé (peut-être à tort) qu’une intervention humaine avait aidé la machine lors d’un coup particulièrement déroutant !</p></li>
+</ul>
+</li>
+<li><p><strong>Années 2010 : L’Ère du Deep Learning (Apprentissage Profond).</strong> Grâce à plus de données (“Big Data”) et plus de puissance de calcul, les réseaux de neurones profonds révolutionnent la reconnaissance d’images, de la parole, la traduction… C’est la base de beaucoup d’IA actuelles.</p></li>
+<li><p><strong>2016 : AlphaGo Bat Lee Sedol.</strong> L’IA de Google DeepMind bat le champion du monde de Go, un jeu bien plus complexe que les échecs. AlphaGo réalise même un coup (“Move 37”) considéré comme “créatif” et totalement inattendu par les experts humains.</p></li>
+<li><p><strong>Fin 2022 - Aujourd’hui : Le Boom de l’IA Générative.</strong> Lancement public de ChatGPT, suivi par une explosion d’outils capables de générer texte, images, code… et nous voici !</p></li>
+</ul>
+<p><strong>Ce qu’il faut retenir :</strong> L’histoire de l’IA est cyclique, faite d’enthousiasme, de défis et de bonds technologiques majeurs. Nous sommes actuellement dans une phase d’accélération impressionnante !</p>
+<p><strong>Suggestion d’Illustration :</strong><br />
+Une frise chronologique visuelle et simplifiée reprenant les dates clés avec de petites icônes (Turing, Flocon de neige, Robot expert, Cavalier d’échec, Pierre de Go, Icône ChatGPT).</p>
+<hr class="docutils" />
+<p><strong>(Bloc Activité Interactive 1 - Teachable Machine)</strong></p>
+<p><strong>Titre :</strong> Jouez à l’Entraîneur d’IA ! Avec Teachable Machine 🕹️</p>
+<p><strong>Texte :</strong><br />
+Envie de comprendre concrètement comment une IA peut apprendre à reconnaître des choses ? Google a créé un outil simple et amusant pour ça : <strong>Teachable Machine</strong>. Vous allez pouvoir entraîner une petite IA directement dans votre navigateur, sans une ligne de code !</p>
+<p><strong>Votre Mission (si vous l’acceptez !) :</strong></p>
+<ol class="arabic simple">
+<li><p>Cliquez sur le lien ci-dessous pour accéder à Teachable Machine (cela ouvrira un nouvel onglet).</p></li>
+<li><p>Choisissez “Image Project”.</p></li>
+<li><p>Créez au moins deux “classes” (catégories). Par exemple : “Moi avec lunettes” / “Moi sans lunettes”, ou “Main ouverte” / “Poing fermé”, ou “Tasse” / “Bouteille”.</p></li>
+<li><p>Utilisez votre webcam pour donner plusieurs exemples d’images pour chaque classe. Plus vous donnez d’exemples variés, mieux l’IA apprendra !</p></li>
+<li><p>Cliquez sur “Train Model” (l’entraînement prend quelques secondes/minutes).</p></li>
+<li><p>Testez votre modèle ! Montrez-lui de nouvelles images (via la webcam) et voyez s’il devine correctement la classe.</p></li>
+</ol>
+<p><strong>Lien :</strong> <a class="reference external" href="https://www.google.com/url?sa=E&amp;amp;q=https%3A%2F%2Fteachablemachine.withgoogle.com%2F">https://teachablemachine.withgoogle.com/</a></p>
+<p><strong>Objectif Pédagogique :</strong> Comprendre de manière intuitive le principe de l’<strong>apprentissage supervisé</strong> (l’IA apprend à partir d’exemples étiquetés que vous lui donnez) et l’importance de la <strong>qualité et quantité des données</strong> d’entraînement. C’est une base de l’IA moderne !</p>
+<p><strong>Amusez-vous bien !</strong> (Comptez 5-10 minutes pour cette activité).</p>
+<p><strong>Suggestion d’Illustration :</strong><br />
+Une capture d’écran de l’interface de Teachable Machine, ou des petites icônes montrant les étapes (Webcam -&gt; Clic -&gt; Cerveau IA qui apprend -&gt; Résultat).</p>
+<hr class="docutils" />
+<p><strong>(Bloc Activité Interactive 2 - Mini “Test de Turing” Conceptuel)</strong></p>
+<p><strong>Titre :</strong> Humain ou Machine ? Petit Test de Réflexion 🤔</p>
+<p><strong>Texte :</strong><br />
+Le Test de Turing original est complexe à mettre en œuvre. Mais réfléchissons à l’idée : seriez-vous capable de distinguer une conversation avec une IA très avancée d’une conversation avec un humain ?</p>
+<p><strong>Mini-Sondage (Outil Moodle Sondage ou Poll) :</strong></p>
+<p><strong>Question :</strong> Imaginez que vous discutez en ligne (par écrit uniquement) pendant 5 minutes avec une entité inconnue. Pensez-vous qu’aujourd’hui, une IA comme ChatGPT (ou ses concurrents les plus avancés) pourrait vous tromper et se faire passer pour un humain pendant ces 5 minutes ?</p>
+<ul class="simple">
+<li><p>a) Oui, très probablement.</p></li>
+<li><p>b) Peut-être, ça dépendrait du sujet de conversation.</p></li>
+<li><p>c) Probablement pas, je sentirais la différence.</p></li>
+<li><p>d) Non, c’est impossible pour une machine.</p></li>
+</ul>
+<p>(Affichez les résultats après réponse pour voir l’avis général).</p>
+<p><strong>Objectif Pédagogique :</strong> Susciter la réflexion sur les capacités actuelles des IA conversationnelles et sur ce qui définit (encore ?) l’intelligence et la communication humaines. Il n’y a pas de “bonne” réponse absolue ici, le débat est ouvert !</p>
+<p><strong>Suggestion d’Illustration :</strong><br />
+Deux bulles de dialogue, l’une avec une icône humaine, l’autre avec une icône robot, et un point d’interrogation entre les deux.</p>
+<hr class="docutils" />
+<p><strong>(Bloc Activité Interactive 3 - Quiz “Mythes vs Réalité”)</strong></p>
+<p><strong>Titre :</strong> Démêlons le Vrai du Faux : Quiz sur les Idées Reçues sur l’IA 🧐</p>
+<p><strong>Texte :</strong><br />
+L’IA est entourée de beaucoup de fantasmes et d’idées reçues. Testons vos connaissances !</p>
+<p><strong>(Utiliser l’outil Moodle Quiz - Questions Vrai/Faux ou QCM)</strong></p>
+<ol class="arabic simple">
+<li><p><strong>L’Intelligence Artificielle peut avoir des émotions comme les humains.</strong> (Faux - Elle peut simuler des émotions, mais ne les ressent pas).</p></li>
+<li><p><strong>L’objectif principal de l’IA est de créer des robots qui nous ressemblent.</strong> (Faux - L’objectif est de réaliser des tâches intelligentes, la forme physique est secondaire et souvent inexistante).</p></li>
+<li><p><strong>Une IA ne peut être créative.</strong> (Discutable/Plutôt Faux - Des IA génèrent de l’art, de la musique, des textes originaux. La définition de “créativité” est débattue, mais elles produisent du nouveau).</p></li>
+<li><p><strong>Les IA apprennent principalement en lisant d’énormes quantités de données.</strong> (Vrai - C’est la base du Machine Learning et du Deep Learning actuels).</p></li>
+<li><p><strong>L’IA va bientôt remplacer tous les emplois humains.</strong> (Faux/Nuancé - L’IA transforme le marché du travail, certains emplois évoluent, d’autres disparaissent, de nouveaux apparaissent. Le remplacement total est une simplification excessive).</p></li>
+</ol>
+<p>(Fournir un feedback court pour chaque réponse après soumission).</p>
+<p><strong>Objectif Pédagogique :</strong> Corriger quelques idées fausses courantes et poser les bases d’une compréhension plus réaliste de l’IA.</p>
+<hr class="docutils" />
+<p><strong>(Bloc Conclusion du Module)</strong></p>
+<p><strong>Texte :</strong><br />
+Et voilà pour ce plongeon rapide dans le grand bain de l’Intelligence Artificielle ! Vous avez maintenant une meilleure idée d’où vient ce domaine, de ses étapes clés, et vous avez même mis la main à la pâte (ou plutôt, à la webcam !).</p>
+<p>Retenez que :</p>
+<ul class="simple">
+<li><p>L’IA a une <strong>histoire riche</strong> et est déjà <strong>partout</strong>.</p></li>
+<li><p>Elle repose sur des principes comme l’<strong>apprentissage à partir de données</strong>.</p></li>
+<li><p>Il est important de distinguer les <strong>mythes</strong> de la <strong>réalité</strong>.</p></li>
+</ul>
+<p>Vous êtes maintenant prêt.e à zoomer sur une branche particulièrement excitante et actuelle de l’IA : l’<strong>IA Générative</strong>. Comment fonctionne-t-elle ? Comment l’utiliser à l’ULB ? Quels sont les enjeux ?</p>
+<p><strong>C’est ce que nous allons découvrir dès le Module 1 ! Cliquez sur “Module Suivant” pour continuer l’aventure.</strong></p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./0_Intro"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../README.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">L’intelligence artificielle générative à l’ULB</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>IA générative: Introduction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle">Université libre de Bruxelles - Academ·IA</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>-->
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
