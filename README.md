@@ -43,4 +43,3 @@ Le guide est en cours de construction.
 
 Image credit: Dall-E 3.
 
-
