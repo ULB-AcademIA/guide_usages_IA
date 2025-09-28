@@ -14,9 +14,6 @@ Le guide a été conçu dans le cadre du plan de formation <a href="https://www.
 4. [Améliorer son prompt](part4)
 5. [Points de vigilance](part5)
 6. [Principes d'utilisation à l'ULB](part6)
-7. [Boîte à outils de référence](part7)
-8. [Jeu - Test de Turing](part8)
-9. [Aller plus loin](part9)
 
 </p>
 
@@ -34,15 +31,8 @@ Le guide a été conçu dans le cadre du plan de formation <a href="https://www.
 
 Pour toute question, n'hésite pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
 
-Le guide est en cours de construction. Finalisation prévue pour le 15/02.
+Ce guide est en cours de construction.
 
-</p>
-
-![beaver](beaver.png)
-
-</p>
-
-Image credit: L'IA Dall-E 3.
 
 
 

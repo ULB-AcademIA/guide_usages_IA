@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -67,11 +64,10 @@
     <link rel="icon" href="../_static/IA.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Exemples d’usages" href="../2_Exemples_usage/Exemples_usage.html" />
+    <link rel="next" title="2. Fonctionnement de l’IA générative" href="../2_Comment_ca_marche/Comment_ca_marche.html" />
     <link rel="prev" title="L’intelligence artificielle générative à l’ULB" href="../README.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="L'intelligence artificielle générative à l’ULB - Home"/>
-    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="L'intelligence artificielle générative à l’ULB - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -175,14 +186,11 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenu</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. IA générative: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Exemples_usage/Exemples_usage.html">2. Exemples d’usages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Comment_ca_marche/Comment_ca_marche.html">3. Fonctionnement de l’IA générative</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Comment_ca_marche/Comment_ca_marche.html">2. Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Exemples_usage/Exemples_usage.html">3. Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts: ACTIF et APRES</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_Points_de_vigilance/Points_de_vigilance.html">5. Points de vigilance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html">6. Principes d’utilisation à l’ULB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html">7. Boîte à outils de référence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../8_Jeu_test_de_Turing/Jeu_test_de_Turing.html">8. Jeu - Test de Turing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../9_Aller_plus_loin/Aller_plus_loin.html">9. Aller plus loin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
@@ -196,14 +204,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -364,16 +367,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -430,27 +441,31 @@
 <h2><span class="section-number">1.2. </span>Exemples<a class="headerlink" href="#exemples" title="Link to this heading">#</a></h2>
 <p>Voyons quelques exemples avec l’outil Microsoft Copilot, qui est l’outil d’IA générative de référence proposé par Microsoft.</p>
 <p><strong>Note</strong>: <strong>Microsoft Copilot est l’outil à privilégier à l’ULB</strong> car c’est le seul qui garantit la confidentialité et la propriété des données transmises ou produites grâce au contrat qui lie Microsoft à l’ULB. De nombreux autres outils d’IA génératives existent, en particulier open-source, voir la section “Boîte à outils de référence”.</p>
-<p>Microsoft Copilot est accessible à l’adresse <a class="reference external" href="https://copilot.cloud.microsoft/">https://copilot.cloud.microsoft/</a>, où tu pourras t’y connecter avec ton adresse email ULB. Le pictogramme d’un bouclier vert doit être présent en haut à droite pour confirmer que tes conversations sont protégées.</p>
+<p>Microsoft Copilot est accessible à l’adresse <a class="reference external" href="https://copilot.cloud.microsoft/">https://copilot.cloud.microsoft/</a>, où tu pourras t’y connecter avec ton adresse email ULB. <strong>Le pictogramme d’un bouclier vert doit être présent en haut à droite pour confirmer que tes conversations sont protégées</strong>.</p>
 <section id="generation-de-texte">
 <h3><span class="section-number">1.2.1. </span>Génération de texte<a class="headerlink" href="#generation-de-texte" title="Link to this heading">#</a></h3>
 <p>Voici ci-dessous un échange avec Copilot, demandant de générer des paroles d’une chanson sur le thème du libre examen dans un style hip-hop.</p>
-<p><img alt="copilot_example_gpt4" src="../_images/copilot_example_gpt5.png" />
+<p><img alt="copilot_example_gpt4" src="../_images/1_GPT5_Vert_Text.jpg" />
 Pas si mal !</p>
 <p>Que s’est-il passé dans cet échange ?</p>
 <ul class="simple">
-<li><p>Avec Copilot en mode génération de texte, le modèle de prédiction s’appelle <a class="reference external" href="https://en.wikipedia.org/wiki/GPT-4">GPT-4</a>. Notre prompt a été envoyé à ce modèle de prédiction, qui a renvoyé la réponse sous forme de texte.</p></li>
-<li><p>GPT-4 est développé par OpenAI, la société américaine qui commercialise aussi ChatGPT.</p></li>
-<li><p><strong>Il est important de distinguer le modèle de l’interface utilisateur</strong>. Ici, l’interface utilisateur est celle de Microsoft, qui offre des fonctionnalités pratiques comme le fait de fournir des suggestions pour continuer les échanges, ou d’aller chercher du contenu sur Internet. Le coeur de la génération de texte est cependant le modèle GPT-4 (qui est aussi celui derrière l’outil ChatGPT d’OpenAI) qui n’a pas accès à Internet, et ne fait que prédire les mots suivants comme un outil d’auto-complétion.</p></li>
+<li><p>Avec Copilot en mode génération de texte, le modèle de prédiction s’appelle <a class="reference external" href="https://fr.wikipedia.org/wiki/GPT-5">GPT-5</a>. Notre prompt a été envoyé à ce modèle de prédiction, qui a renvoyé la réponse sous forme de texte.</p></li>
+<li><p>GPT-5 est développé par OpenAI, la société américaine qui commercialise aussi ChatGPT.</p></li>
+<li><p><strong>Il est important de distinguer le modèle de l’interface utilisateur</strong>. Ici, l’interface utilisateur est celle de Microsoft, qui offre des fonctionnalités pratiques comme le fait de fournir des suggestions pour continuer les échanges, ou d’aller chercher du contenu sur Internet. Le coeur de la génération de texte est cependant le modèle GPT-5 (qui est aussi celui derrière l’outil ChatGPT d’OpenAI) qui n’a pas accès à Internet, et ne fait que prédire les mots suivants comme un outil d’auto-complétion.</p></li>
 </ul>
-<p>Pour plus d’explications sur ce que font réellement les modèles de langage comme GPT-4, rends-toi sur la capsule “Comment ça marche?” !</p>
+<p>Pour plus d’explications sur ce que font réellement les modèles de langage comme GPT-5, rendez-vous sur la capsule <a class="reference external" href="https://uv.ulb.ac.be/course/view.php?id=127533&amp;amp;section=3">Comment ça marche?</a> !</p>
 </section>
 <section id="generation-d-images">
 <h3><span class="section-number">1.2.2. </span>Génération d’images<a class="headerlink" href="#generation-d-images" title="Link to this heading">#</a></h3>
-<p>L’interface utilisateur Copilot permet aussi de générer des images. Lorsque l’on entre un prompt demandant la création d’une image, c’est alors un autre modèle qui est appelé. Ce modèle s’appelle <a class="reference external" href="https://openai.com/index/dall-e-3/">DALL-E 3</a>, qui est aussi développé par OpenAI.</p>
-<p>Le modèle renvoie à Copilot l’image (ou les images) générées.</p>
-<p>Ici, nous avons demandé de générer des illustrations, dans un style art-nouveau, de Pierre-Théodore Verhaegen en train de rapper sur la place Flagey.</p>
-<p><img alt="copilot_example_dalle3" src="../_images/copilot_example_dalle4.png" /></p>
-<p>On note dans ces propositions la présence d’un style art-nouveau. En revanche, Flagey n’y est pas spécialement reconnaissable, à l’instar du <a class="reference external" href="https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen" title="https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen">fondateur de l’ULB</a>.</p>
+<p>Le modèle GPT-5 qui se cache derrière l’interface utilisateur Copilot permet aussi de générer des images. Si l’on fait une demande d’image ou d’illustration le modèle retourne une image, que Copilot affichera dans l’interface.</p>
+<p>Ici, nous demandons de générer une illustration, dans un style art-nouveau, de Pierre-Théodore Verhaegen en train de rapper sur la place Flagey.</p>
+<p><img alt="copilot_example_dalle3" src="../_images/1_GPT5_Vert_Image.jpg" /></p>
+<p>Rendez-vous sur la page Wikipédia du <a class="reference external" href="https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen" title="https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen">fondateur de l’ULB</a> et demandez-vous:</p>
+<ul class="simple">
+<li><p>Ressemble-t-il à la représentation qui en est faite par l’IA générative ?</p></li>
+<li><p>La période pendant laquelle il a vécu correspond-elle à celle de l’art-nouveau ?</p></li>
+<li><p>A quelles dates correspondent celles indiquées en bas de l’image ?</p></li>
+</ul>
 <p>Cet exemple illustre un point essentiel des IA génératives : si elles peuvent se révéler assez efficaces d’un point de vue créatif, elles ne sont cependant pas conçues pour générer des contenus factuellement corrects.</p>
 </section>
 <section id="generation-d-audio-video">
@@ -469,10 +484,11 @@ Pas si mal !</p>
 </section>
 <section id="vocabulaire-de-base-pour-l-ia-generative">
 <h2><span class="section-number">1.4. </span>Vocabulaire de base pour l’IA générative<a class="headerlink" href="#vocabulaire-de-base-pour-l-ia-generative" title="Link to this heading">#</a></h2>
-<p><strong>Prompt (aussi appelé requête, ou invite de commande)</strong>: Description textuelle de la tâche qu’une IA générative doit effectuer (<a class="reference external" href="https://fr.wikipedia.org/wiki/Ing%C3%A9nierie_de_prompt" title="Wikipedia">Wikipedia</a>).</p>
-<p><strong>Modèle de prédiction:</strong> Fonction produite après avoir été entraînée à reconnaître des relation statistiques dans des données. Dans le cas de la génération de texte, on parle de <strong>grand modèle de langage</strong> (ou <strong>large language model (LLM)</strong> en anglais) (<a class="reference external" href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" title="Wikipedia">Wikipedia</a>).</p>
+<p><strong>Prompt (aussi appelé requête, ou invite de commande)</strong> : Description textuelle de la tâche qu’une IA générative doit effectuer (<a class="reference external" href="https://fr.wikipedia.org/wiki/Ing%C3%A9nierie_de_prompt" title="Wikipedia">Wikipedia</a>).</p>
+<p><strong>Modèle de prédiction :</strong> Fonction produite après avoir été entraînée à reconnaître des relation statistiques dans des données. Dans le cas de la génération de texte, on parle de <strong>grand modèle de langage</strong> (ou <strong>large language model (LLM)</strong> en anglais) (<a class="reference external" href="https://fr.wikipedia.org/wiki/Grand_mod%C3%A8le_de_langage" title="Wikipedia">Wikipedia</a>).</p>
 <p><strong>Apprentissage automatique (ou “machine learning” en anglais)</strong> : Champ d’étude de l’<a class="reference external" href="https://fr.wikipedia.org/wiki/Intelligence_artificielle" title="intelligence artificielle">intelligence artificielle</a> qui se fonde sur des approches mathématiques et statistiques pour donner aux ordinateurs la capacité d’« apprendre » à partir de données (<a class="reference external" href="https://fr.wikipedia.org/wiki/Apprentissage_automatique" title="Wikipedia">Wikipedia</a>).</p>
-<p><strong>Algorithme:</strong> Suite finie et non ambiguë d’instructions et d’opérations permettant de résoudre une classe de problèmes (<a class="reference external" href="https://fr.wikipedia.org/wiki/Algorithme" title="Wikipedia">Wikipedia</a>).</p>
+<p><strong>Multimodalité</strong> : En apprentissage automatique, la <strong>multimodalité</strong> est la capacité d’un système à traiter ou à générer plusieurs types d’information (texte, images, son, actions…) (<a class="reference external" href="https://fr.wikipedia.org/wiki/Multimodalit%C3%A9_(IA)">Wikipedia</a>).</p>
+<p><strong>Algorithme :</strong> Suite finie et non ambiguë d’instructions et d’opérations permettant de résoudre une classe de problèmes (<a class="reference external" href="https://fr.wikipedia.org/wiki/Algorithme" title="Wikipedia">Wikipedia</a>).</p>
 </section>
 </section>
 
@@ -516,11 +532,11 @@ Pas si mal !</p>
       </div>
     </a>
     <a class="right-next"
-       href="../2_Exemples_usage/Exemples_usage.html"
+       href="../2_Comment_ca_marche/Comment_ca_marche.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Exemples d’usages</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Fonctionnement de l’IA générative</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -531,8 +547,7 @@ Pas si mal !</p>
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -597,8 +612,8 @@ Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/b
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

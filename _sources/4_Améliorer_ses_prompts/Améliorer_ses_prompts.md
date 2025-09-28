@@ -1,15 +1,5 @@
 (part4)=
-# Améliorer ses prompts
-
-## Qu'est-ce qu'un prompt?
-
-Le prompt est l'ensemble des instructions que l'on donne à l'outil d'IA générative pour accomplir une tâche.
-
-![prompt_about_prompt](attachments/prompt_about_prompt.png)
-
-La qualité du résultat que produira un outil d'IA générative dépendra en partie de la façon dont le prompt est formulé. 
-
-Par exemple, si tu demandes à un outil d'IA générative de fournir des idées pour ta prochaine présentation, tu auras peu de chance d'avoir des résultats pertinents si tu ne donnes pas d'informations supplémentaires sur l'objectif de la présentation, un état de l'art des solutions existantes, les perspectives que tu souhaites apporter, tes contraintes, etc.
+# Améliorer ses prompts: ACTIF et APRES
 
 ## Comment rédiger un bon prompt avec la méthode ACTIF ?
 

@@ -16,34 +16,31 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -68,10 +65,9 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Ressources" href="Ressources.html" />
-    <link rel="prev" title="9. Aller plus loin" href="../9_Aller_plus_loin/Aller_plus_loin.html" />
+    <link rel="prev" title="6. Principes d’utilisation à l’ULB" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="L'intelligence artificielle générative à l’ULB - Home"/>
-    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="L'intelligence artificielle générative à l’ULB - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -175,14 +186,11 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenu</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html">1. IA générative: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Exemples_usage/Exemples_usage.html">2. Exemples d’usages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Comment_ca_marche/Comment_ca_marche.html">3. Fonctionnement de l’IA générative</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Comment_ca_marche/Comment_ca_marche.html">2. Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Exemples_usage/Exemples_usage.html">3. Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts: ACTIF et APRES</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_Points_de_vigilance/Points_de_vigilance.html">5. Points de vigilance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html">6. Principes d’utilisation à l’ULB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html">7. Boîte à outils de référence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../8_Jeu_test_de_Turing/Jeu_test_de_Turing.html">8. Jeu - Test de Turing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../9_Aller_plus_loin/Aller_plus_loin.html">9. Aller plus loin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="current nav bd-sidenav">
@@ -196,14 +204,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -364,16 +367,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -434,31 +445,31 @@
 <tbody>
 <tr class="row-even"><td><p>IA Générative</p></td>
 <td><p><strong>AI05</strong> : Conscient que les systèmes d’IA peuvent être utilisés pour créer automatiquement du contenu numérique (par ex. textes, actualités, essais, tweets, musique, images) et que ce contenu peut être difficile à distinguer des créations humaines</p></td>
-<td><p>1, 2, 3, 8</p></td>
+<td><p>1, 2, 3</p></td>
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p><strong>AI07</strong> : Conscient que les systèmes d’IA peuvent aider l’utilisateur à éditer et traiter du contenu numérique (par ex. certains logiciels de retouche photo utilisent l’IA pour vieillir automatiquement un visage, tandis que certaines applications de texte utilisent l’IA pour suggérer des mots, phrases et paragraphes)</p></td>
-<td><p>1, 2, 3, 7, 8</p></td>
+<td><p>1, 2, 3</p></td>
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p><strong>AI08</strong> : Conscient que certains systèmes d’IA visent à fournir une interaction semblable à celle des humains avec les machines (par ex. agents conversationnels tels que les chatbots de service client)</p></td>
-<td><p>1, 8</p></td>
+<td><p>1, 2</p></td>
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p><strong>AI23</strong> : Conscient que l’IA est un domaine en constante évolution, dont le développement et l’impact restent encore très incertains</p></td>
-<td><p>3, 5</p></td>
+<td><p>2, 5</p></td>
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p><strong>AI29</strong> : Sait formuler des requêtes de recherche pour obtenir le résultat souhaité lorsqu’il interagit avec des agents conversationnels (par ex. ChatGPT, Dall-E, …)</p></td>
-<td><p>2, 4</p></td>
+<td><p>3, 4</p></td>
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p><strong>AI50</strong> : Conscient que les algorithmes d’IA fonctionnent de manière généralement non visible ou difficilement compréhensible par les utilisateurs. Cela est souvent appelé « prise de décision en boîte noire », car il peut être impossible de retracer comment et pourquoi un algorithme fait certaines suggestions ou prédictions</p></td>
-<td><p>3</p></td>
+<td><p>2</p></td>
 </tr>
 <tr class="row-even"><td><p>Désinformation</p></td>
 <td><p><strong>AI05</strong> : Conscient que les systèmes d’IA peuvent être utilisés pour créer automatiquement du contenu numérique (par ex. textes, actualités, essais, tweets, musique, images) en utilisant du contenu numérique existant comme source. Ce contenu peut être difficile à distinguer des créations humaines.</p></td>
-<td><p>8</p></td>
+<td><p>1,5</p></td>
 </tr>
 <tr class="row-odd"><td><p></p></td>
 <td><p><strong>AI38</strong> : Sait comment intégrer du contenu numérique édité/manipulé par l’IA dans son propre travail (par ex. incorporer des mélodies générées par l’IA dans sa propre composition musicale). Cette utilisation de l’IA peut être controversée, car elle soulève des questions sur le rôle de l’IA dans les œuvres artistiques, et notamment sur qui doit être crédité.</p></td>
@@ -466,15 +477,15 @@
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p><strong>AI51</strong> : Sait que le terme « deepfakes » désigne des images, vidéos ou enregistrements audio générés par l’IA d’événements ou de personnes qui n’ont pas réellement eu lieu (par ex. des discours de politiciens, des visages de célébrités sur des images pornographiques). Ils peuvent être impossibles à distinguer de la réalité.</p></td>
-<td><p>8</p></td>
+<td><p>5</p></td>
 </tr>
 <tr class="row-odd"><td><p>Biais</p></td>
 <td><p><strong>AI49</strong> : Conscient que les données sur lesquelles repose l’IA peuvent contenir des biais. Si tel est le cas, ces biais peuvent être automatisés et amplifiés par l’utilisation de l’IA. Par exemple, les résultats de recherche sur les professions peuvent inclure des stéréotypes liés aux genres (par ex. chauffeurs de bus masculins, vendeuses)</p></td>
-<td><p>3, 5</p></td>
+<td><p>2, 5</p></td>
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p><strong>AI56</strong> : Conscient que les systèmes d’IA sont généralement développés par des personnes issues de milieux démographiques restreints (par ex. hommes blancs de classes socio-économiques élevées dans des pays à haut revenu), ce qui peut signifier que les systèmes développés sont moins sensibles aux besoins des femmes, des personnes issues de minorités ethniques, des groupes socio-économiques inférieurs, des personnes nécessitant une accessibilité numérique (par ex. en situation de handicap, limitations fonctionnelles) ou des citoyens des pays à faible revenu.</p></td>
-<td><p>3, 5</p></td>
+<td><p>2, 5</p></td>
 </tr>
 <tr class="row-odd"><td><p>Protection des données</p></td>
 <td><p><strong>AI14</strong> : Pèse les avantages et les inconvénients de l’utilisation des moteurs de recherche basés sur l’IA (par ex. bien qu’ils puissent aider les utilisateurs à trouver les informations souhaitées, ils peuvent compromettre la confidentialité et les données personnelles ou soumettre l’utilisateur à des intérêts commerciaux).</p></td>
@@ -490,7 +501,7 @@
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p><strong>AI45</strong> : Conscient que tout ce qui est partagé publiquement en ligne (par ex. images, vidéos, sons) peut être utilisé pour entraîner des systèmes d’IA. Par exemple, les entreprises développant des logiciels de reconnaissance faciale par IA peuvent utiliser des images personnelles partagées en ligne (par ex. des photographies de famille) pour entraîner et améliorer la capacité du logiciel à reconnaître automatiquement ces personnes dans d’autres images, ce qui pourrait être indésirable (par ex. une atteinte à la vie privée).</p></td>
-<td><p>3, 5</p></td>
+<td><p>2, 5</p></td>
 </tr>
 <tr class="row-odd"><td><p>Environnement</p></td>
 <td><p><strong>203</strong> : Conscient de l’impact environnemental des pratiques numériques quotidiennes (par ex. le streaming vidéo qui repose sur le transfert de données), et que cet impact est composé de la consommation d’énergie et des émissions de carbone provenant des appareils, des infrastructures réseau et des centres de données.</p></td>
@@ -533,7 +544,7 @@
 </tr>
 <tr class="row-even"><td><p>Techniques et applications de l’IA</p></td>
 <td><p><strong>CG4.1.3.2 : Développer des connaissances conceptuelles sur la manière dont l’IA est entraînée à partir des données et des algorithmes</strong> : Encourager l’abstraction conceptuelle des étudiants à partir d’exemples sur la façon dont les modèles d’apprentissage automatique sont entraînés avec des données et des algorithmes ; aider les étudiants à acquérir une compréhension adaptée à leur âge des trois types d’algorithmes d’IA, à savoir l’apprentissage supervisé, l’apprentissage non supervisé et l’apprentissage par renforcement. Cela devrait inclure la manière dont les données utilisées par ces trois types d’algorithmes sont acquises et étiquetées. Démystifier les affirmations selon lesquelles l’IA automatisera la programmation des algorithmes et que les humains n’ont pas besoin d’apprendre les algorithmes.</p></td>
-<td><p>3</p></td>
+<td><p>2</p></td>
 </tr>
 <tr class="row-odd"><td><p>Conception des systèmes d’IA</p></td>
 <td><p><strong>CG4.1.4.1 : Développer des compétences de pensée critique sur les situations où l’IA ne devrait pas être utilisée</strong> : En s’appuyant sur des exemples, guider les étudiants à développer des compétences d’analyse critique pour examiner les raisons pour lesquelles l’IA devrait ou ne devrait pas être utilisée pour résoudre certains défis du monde réel (ex. : amélioration de la productivité institutionnelle, développement durable des communautés ou précision et efficacité de la prise de décision humaine), en tenant compte des implications humaines et environnementales. Clarifier dans quelles situations et sous quelles conditions l’IA ne peut et/ou ne doit pas être appliquée (ex. : lorsque des solutions non basées sur l’IA offrent des performances équivalentes avec un moindre risque éthique et un impact environnemental réduit, ou lorsque l’utilisation de l’IA affaiblirait la conscience humaine ou manipulerait les actions humaines).</p></td>
@@ -549,7 +560,7 @@
 </tr>
 <tr class="row-even"><td><p></p></td>
 <td><p><strong>CG4.2.2.3 : Approfondir les connaissances pratiques sur l’utilisation sécurisée de l’IA et la sensibilisation aux réglementations locales applicables</strong> : Aider les étudiants à catégoriser les risques généraux liés à l’IA, les risques spécifiques à certains outils d’IA et les incidents typiques impliquant l’IA. Guider les étudiants à approfondir leurs connaissances sur les droits humains en matière de protection et de confidentialité des données, ainsi que sur les responsabilités légales des créateurs d’IA concernant la collecte de données avec consentement. Les encourager à pratiquer des stratégies garantissant que leurs données personnelles ne sont collectées, utilisées, partagées, archivées et supprimées qu’avec leur consentement éclairé.</p></td>
-<td><p>5, 6, 7, 9</p></td>
+<td><p>5, 6</p></td>
 </tr>
 </tbody>
 </table>
@@ -588,12 +599,12 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../9_Aller_plus_loin/Aller_plus_loin.html"
+       href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Aller plus loin</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Principes d’utilisation à l’ULB</p>
       </div>
     </a>
     <a class="right-next"
@@ -612,8 +623,7 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -671,8 +681,8 @@ Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/b
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

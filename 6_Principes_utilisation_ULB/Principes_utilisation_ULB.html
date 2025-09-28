@@ -16,22 +16,20 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -39,11 +37,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -67,11 +64,10 @@
     <link rel="icon" href="../_static/IA.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Boîte à outils de référence" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html" />
+    <link rel="next" title="Compétences abordées" href="../Annexes/Comp%C3%A9tences.html" />
     <link rel="prev" title="5. Points de vigilance" href="../5_Points_de_vigilance/Points_de_vigilance.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -87,8 +83,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -96,6 +103,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -103,8 +111,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -120,8 +128,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -151,17 +158,21 @@
     
     
     <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="L'intelligence artificielle générative à l’ULB - Home"/>
-    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="L'intelligence artificielle générative à l’ULB - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -175,14 +186,11 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenu</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html">1. IA générative: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Exemples_usage/Exemples_usage.html">2. Exemples d’usages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Comment_ca_marche/Comment_ca_marche.html">3. Fonctionnement de l’IA générative</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Comment_ca_marche/Comment_ca_marche.html">2. Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Exemples_usage/Exemples_usage.html">3. Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts: ACTIF et APRES</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_Points_de_vigilance/Points_de_vigilance.html">5. Points de vigilance</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Principes d’utilisation à l’ULB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html">7. Boîte à outils de référence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../8_Jeu_test_de_Turing/Jeu_test_de_Turing.html">8. Jeu - Test de Turing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../9_Aller_plus_loin/Aller_plus_loin.html">9. Aller plus loin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="nav bd-sidenav">
@@ -196,14 +204,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -364,16 +367,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -397,11 +408,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quest-ce-qui-est-considere-comme-une-fraude">6.1. Qu’est-ce qui est considéré comme une fraude ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-recommandes">6.2. Outils recommandés</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-points-d-attention">6.3. Autres points d’attention</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-d-une-production-issue-d-une-intelligence-artificielle-ia">6.4. Citation d’une production issue d’une Intelligence Artificielle (IA)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reglements">6.5. Règlements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-vers-les-reglements">6.1. Liens vers les règlements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outil-recommande">6.2. Outil recommandé</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-de-vigilance">6.3. Points de vigilance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citer-l-ia-en-note-bibliographique-dans-quels-cas">6.4. Citer l’IA en note bibliographique : dans quels cas ?</a></li>
 </ul>
             </nav>
         </div>
@@ -415,56 +425,58 @@
                   
   <section id="principes-d-utilisation-a-l-ulb">
 <span id="part6"></span><h1><span class="section-number">6. </span>Principes d’utilisation à l’ULB<a class="headerlink" href="#principes-d-utilisation-a-l-ulb" title="Link to this heading">#</a></h1>
+<p>L’utilisation des outils d’intelligence artificielle générative (IAG) est permise à l’ULB pour vous assister dans votre parcours académique, mais elle est encadrée pour garantir l’intégrité de vos travaux.</p>
 <p><img alt="charte_usages_ULB" src="../_images/charte_usages_ULB.png" /></p>
-<section id="quest-ce-qui-est-considere-comme-une-fraude">
-<h2><span class="section-number">6.1. </span>Qu’est-ce qui est considéré comme une fraude ?<a class="headerlink" href="#quest-ce-qui-est-considere-comme-une-fraude" title="Link to this heading">#</a></h2>
+<p>Les dispositions relatives aux principes d’utilisation de l’IA générative dans les enseignements à l’ULB ont été mises à jour en juillet 2025 et sont définies dans <a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes">le règlement général des études (RGE)</a>, en particulier à travers l’article 40. Les règles et principes à suivre peuvent être résumés ainsi :</p>
+<p><strong>Règles spécifiques aux évaluations</strong> :</p>
 <ul class="simple">
-<li><p>La réalisation avec l’IA d’une tâche sur laquelle porte une évaluation (sauf si autorisation explicite dans la fiche de cours ou dans les consignes d’évaluation)</p>
-<ul>
-<li><p>Le <a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes-2024-2025">règlement général des études de l’ULB</a> précise que l’IA générative ne doit pas être utilisée pour effectuer une tâche d’apprentissage. Par exemple, et sauf indication contraire du professeur, il est autorisé d’utiliser l’IA générative pour traduire le texte d’un article scientifique de l’anglais vers le français afin d’en comprendre le contenu. A l’inverse, il est interdit d’utiliser l’IA en tant que traducteur si la traduction de ce texte fait l’objet d’une évaluation dans le cadre d’un cours de langue.</p></li>
+<li><p>Pour les <strong>mémoires et travaux de fin d’études</strong>, l’utilisation de l’IA est autorisée sauf restrictions ou limitations motivées et fixées par les facultés ou les enseignants.</p></li>
+<li><p>Pour les <strong>autres évaluations (examens, devoirs)</strong>, l’utilisation de l’IA est <strong>interdite</strong> sauf si l’enseignant l’autorise de manière explicite.</p></li>
 </ul>
-</li>
-<li><p>Masquer ou dissimuler son utilisation de l’IA</p></li>
+<p>Dans tous les cas, l’usage autorisé des outils d’IAG est soumis aux <strong>principes de subsidiarité, de responsabilité et de transparence</strong> :</p>
+<ul class="simple">
+<li><p><strong>Travail personnel avant tout</strong> : L’IA doit être un outil de support, et non remplacer votre réflexion, votre recherche et votre analyse de sources. C’est le <strong>principe de subsidiarité</strong>.</p></li>
+<li><p><strong>Transparence</strong> : Mentionnez toujours l’utilisation de l’IA dans vos travaux (mémoires, devoirs, etc.). Expliquez clairement ce qui a été généré par l’IA et pourquoi vous l’avez utilisée. C’est le <strong>principe de transparence</strong>. Les examinateurs peuvent vous interroger sur vos usages.</p></li>
+<li><p><strong>Responsabilité</strong> : Assurez-vous de ne pas violer les droits d’auteur, qu’il s’agisse de vos propres productions ou de contenus générés par l’IA. Vous êtes responsable du contenu que vous intégrez. C’est le <strong>principe de responsabilité</strong>.</p></li>
 </ul>
+<p>Le non respect de ces règles et principes peut amener au risque de fraude.</p>
 <p><strong>Conséquences des fraudes – Article 83 du RGE (« Plagiat et sanctions »)</strong></p>
 <ul class="simple">
 <li><p>Une sanction académique dépendant de la gravité de la fraude. Cela peut aller jusqu’à l’attribution d’une note de 0/20 à l’épreuve évaluée.</p></li>
 <li><p>Des sanctions disciplinaires sont également applicables en plus de la sanction académique du RGE (ex : réprimande, obligation de valider une formation complémentaire, suspension temporaire, interdiction d’accès à la période d’examens en cours, exclusion …)</p></li>
 </ul>
-</section>
-<section id="outils-recommandes">
-<h2><span class="section-number">6.2. </span>Outils recommandés<a class="headerlink" href="#outils-recommandes" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Microsoft Copilot: Seul outil couvert par un contrat de licence avec l’ULB, protégeant ainsi les données et les conversations des utilisateurs</p></li>
-<li><p>HuggingChat</p></li>
-<li><p>Outils open-source utilisés sur sa machine, tel que LMStudio, Ollama.</p></li>
-</ul>
-<p>En savoir plus sur les outils : <a class="reference external" href="https://uv.ulb.ac.be/course/view.php?id=127533&amp;amp;section=6">ici</a>.</p>
-</section>
-<section id="autres-points-d-attention">
-<h2><span class="section-number">6.3. </span>Autres points d’attention<a class="headerlink" href="#autres-points-d-attention" title="Link to this heading">#</a></h2>
-<p><strong>Modalités d’utilisation dépendent de chaque cours</strong>: Vérifiez toujours avec vos enseignant.e.s les modalités d’utilisation des IA génératives.</p>
-<p><strong>Transparence</strong>. Bien qu’il soit impossible de retracer l’origine des textes produits par les outils d’intelligence artificielle à large modèle de langage (LLM), leur usage, dans la mesure où il n’est pas une production originale de votre part, doit toujours être signalé. <a class="reference external" href="https://uv.ulb.ac.be/mod/book/view.php?id=492082&amp;amp;chapterid=22010">VI - E - 1 - What’s up Doc</a>. Le recours non référencé à une intelligence artificielle est considéré comme une fraude académique ou scientifique. A ce titre, dans le cadre de l’enseignement, elle est soumise à sanction fixée par le <a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes-2024-2025">Règlement général des études, articles 40 et 83</a>).  <a class="reference external" href="https://uv.ulb.ac.be/mod/book/view.php?id=492785&amp;amp;chapterid=22037">VI -H -1 What’s Up Doc</a>.</p>
-<p><strong>Attention au plagiat involontaire !</strong> Les LLMs peuvent générer des verbatim de contenus existants et reprendre des contenus protégés par des droits d’auteur. Ne copiez-collez jamais tel quel la production d’un LLM, et cherchez et référencez toujours les sources originales.</p>
-<p><strong>Erreurs, biais et incohérences</strong>. Les LLM peuvent très facilement contenir des erreurs factuelles, des biais idéologiques ou des incohérences.</p>
-<p><strong>Originalité</strong>. Les travaux que vous proposez doivent être issus d’une réflexion personnelle.</p>
-</section>
-<section id="citation-d-une-production-issue-d-une-intelligence-artificielle-ia">
-<h2><span class="section-number">6.4. </span>Citation d’une production issue d’une Intelligence Artificielle (IA)<a class="headerlink" href="#citation-d-une-production-issue-d-une-intelligence-artificielle-ia" title="Link to this heading">#</a></h2>
-<p>On peut suivre le schéma suivant, inspiré du style APA, pour renseigner les productions faites par une Intelligence Artificielle, comme par exemple ChatGPT. Certains systèmes de référencement demandent de renseigner le type d’intelligence artificielle utilisé (à indiquer juste après le prompt/question que vous avez lancé.e). <a class="reference external" href="https://uv.ulb.ac.be/mod/book/view.php?id=492137&amp;amp;chapterid=22027">VI - F - 3 - What’s up Doc</a></p>
-<p><strong>Nom du producteur de l’Intelligence Artificielle. (Année de consultation). <em>Nom de l’Intelligence Artificielle</em> (date de consultation). [prompt/question utilisé.e]. Disponible sur Internet à l’adresse : https://…</strong></p>
-<p>Exemple :</p>
-<p>Open AI. (2024). <em>ChatGPT</em> (04 juillet 2024). [Trouve moi un exemple de référence de ChatGPT]. Disponible sur Internet à l’adresse : https://www.exemple.be</p>
-</section>
-<section id="reglements">
-<h2><span class="section-number">6.5. </span>Règlements<a class="headerlink" href="#reglements" title="Link to this heading">#</a></h2>
+<p><strong>En cas de doute, la meilleure approche est de vous référer à votre enseignant ou au règlement des études pour les consignes spécifiques à chaque cours.</strong></p>
+<section id="liens-vers-les-reglements">
+<h2><span class="section-number">6.1. </span>Liens vers les règlements<a class="headerlink" href="#liens-vers-les-reglements" title="Link to this heading">#</a></h2>
 <p>Les dispositions relatives aux principes d’utilisation de l’IA générative dans les enseignements à l’ULB sont définis dans:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes">l’article 40 et l’article 83 du RGE</a></p></li>
-<li><p><a class="reference external" href="https://www.ulb.be/fr/intelligence-artificielle/note-dintention-relative-aux-outils-dia-dans-lenseignement-a-lulb">la note d’Intention Relative aux Outils d’Intelligence Artificielle dans l’Enseignement à l’ULB. Conseil académique du 26 février 2024 – Annexe n° 060ter</a></p></li>
+<li><p><a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes">Dispositions liminaires, article 40 et 83 du RGE, et dispositions facultaires complémentaires</a></p></li>
 <li><p><a class="reference external" href="https://portail.ulb.be/fr/documents-officiels/instances-participatives/autres-instances-participatives/reglement-de-la-commission-de-discipline-relative-aux-etudiants?ksession=13a71232-da6b-4171-a6ea-5e1054877863">Règlement de la Commission de discipline relative aux étudiants</a></p></li>
-<li><p><a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes-2024-2025">Les dispositions facultaires complémentaires et les fiches de cours</a></p></li>
+<li><p><a class="reference external" href="https://universitelibrebruxelles.sharepoint.com/:b:/s/GRP_TaskforceFormationMassivelIA/EbwvevSVQQlMlAQ54LEI3nEBelsJO2EzAshJB56QgR5CiQ?e=UKh3MK">Extraits du RGE :  Disposition liminaire h et article 40</a></p></li>
 </ul>
+</section>
+<section id="outil-recommande">
+<h2><span class="section-number">6.2. </span>Outil recommandé<a class="headerlink" href="#outil-recommande" title="Link to this heading">#</a></h2>
+<p>L’outil institutionnel recommandé est <a class="reference external" href="https://copilot.cloud.microsoft/">Copilot</a>. Son usage garantit la confidentialité et la propriété de vos données (transmises ou produites). <strong>C’est le seul outil qui offre actuellement ce niveau de sécurité juridique à l’Université</strong>.</p>
+<p>Cet outil dispose des modèles de type GPT-5 à l’instar de ChatGPT. Il est possible notamment d’uploader un ou plusieurs fichiers dans la conversation (en cliquant sur l’icône de trombone dans la fenêtre de prompt), que le chatbot peut alors analyser, synthétiser, traduire, etc.</p>
+<p><img alt="copilot_interface" src="../_images/copilot_interface.png" /></p>
+<p>Accès : Rendez-vous sur <a class="reference external" href="https://copilot.cloud.microsoft/">https://copilot.cloud.microsoft/</a>, et connectez-vous avec votre adresse email ULB. Une fois connecté, <strong>le logo d’un bouclier vert en haut à droite doit être présent</strong>. Il confirme que vos conversations sont protégées.</p>
+</section>
+<section id="points-de-vigilance">
+<h2><span class="section-number">6.3. </span>Points de vigilance<a class="headerlink" href="#points-de-vigilance" title="Link to this heading">#</a></h2>
+<p><strong>Attention au plagiat involontaire !</strong> Les LLMs peuvent générer des verbatim de contenus existants et reprendre des contenus protégés par des droits d’auteur. Ne copiez-collez jamais tel quel la production d’un LLM, et cherchez et référencez toujours les sources originales.</p>
+<p>Bien qu’il soit impossible de retracer l’origine des textes produits par les outils d’intelligence artificielle à large modèle de langage (LLM), leur usage pour produire un contenu, dans la mesure où il n’est pas une production originale de votre part, doit toujours être signalé. <a class="reference external" href="https://uv.ulb.ac.be/mod/book/view.php?id=492082&amp;amp;chapterid=22010">VI - E - 1 - What’s up Doc</a>. Le recours non référencé à une production d’intelligence artificielle générative est considéré comme une fraude académique ou scientifique. A ce titre, dans le cadre de l’enseignement, elle est soumise à sanction fixée par le <a class="reference external" href="https://www.ulb.be/fr/documents-officiels/reglement-general-des-etudes">Règlement général des études, articles 40 et 83</a>).  <a class="reference external" href="https://uv.ulb.ac.be/mod/book/view.php?id=492785&amp;amp;chapterid=22037">VI -H -1 What’s Up Doc</a>.</p>
+<p><strong>Erreurs, biais et incohérences</strong>. Les LLM peuvent très facilement contenir des erreurs factuelles, des biais idéologiques ou des incohérences. Consultez la <a class="reference external" href="https://uv.ulb.ac.be/course/view.php?id=127533&amp;amp;section=5">page dédiée sur ce sujet</a>.</p>
+</section>
+<section id="citer-l-ia-en-note-bibliographique-dans-quels-cas">
+<h2><span class="section-number">6.4. </span>Citer l’IA en note bibliographique : dans quels cas ?<a class="headerlink" href="#citer-l-ia-en-note-bibliographique-dans-quels-cas" title="Link to this heading">#</a></h2>
+<p>Rappel : l’IA ne peut pas être utilisée comme une source primaire d’information.</p>
+<p>La citation ne s’applique pas pour des usages d’élaboration ou de correction du texte académique (ex : correction de fautes d’orthographes, résumé, brainstorming) =&gt; utiliser ici les manières de mentionner l’IA : déclaration, annexe, ou dans la partie méthodologique du travail.</p>
+<p>Pour le reste, si l’auteur souhaite référencer une production d’une IAG reprise telle quelle dans un travail académique ( ex: sourcer une image générée par une IA,  sourcer une traduction générée par une IA), on peut suivre le schéma suivant, inspiré du style APA :</p>
+<p>(Voir aussi  <a class="reference external" href="https://uv.ulb.ac.be/mod/book/view.php?id=492137&amp;amp;chapterid=22027">VI - F - 3 - What’s up Doc</a>)
+Nom du producteur de l’Intelligence Artificielle (Année de consultation), Nom de l’Intelligence Artificielle (Date de consultation/version) [prompt/question utilisé.e]. Disponible sur Internet à l’adresse : https://…</p>
+<p>Exemple :
+Microsoft. (2025). Copilot Chat (4 juillet 2025). [Traduction]. Disponible sur Internet à l’adresse : https://www.exemple.be</p>
 </section>
 </section>
 
@@ -508,11 +520,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html"
+       href="../Annexes/Comp%C3%A9tences.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Boîte à outils de référence</p>
+        <p class="prev-next-title">Compétences abordées</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -523,8 +535,7 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -533,11 +544,10 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quest-ce-qui-est-considere-comme-une-fraude">6.1. Qu’est-ce qui est considéré comme une fraude ?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils-recommandes">6.2. Outils recommandés</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-points-d-attention">6.3. Autres points d’attention</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citation-d-une-production-issue-d-une-intelligence-artificielle-ia">6.4. Citation d’une production issue d’une Intelligence Artificielle (IA)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reglements">6.5. Règlements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#liens-vers-les-reglements">6.1. Liens vers les règlements</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outil-recommande">6.2. Outil recommandé</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-de-vigilance">6.3. Points de vigilance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#citer-l-ia-en-note-bibliographique-dans-quels-cas">6.4. Citer l’IA en note bibliographique : dans quels cas ?</a></li>
 </ul>
   </nav></div>
 
@@ -585,8 +595,8 @@ Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/b
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

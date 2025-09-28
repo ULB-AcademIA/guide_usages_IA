@@ -1,0 +1,589 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. Exemples d’usages &#8212; L&#39;intelligence artificielle générative à l’ULB</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '3_Exemples_usage/Exemples_usage';</script>
+    <script src="../_static/gtag_0.js?v=8aa108c4"></script>
+    <script src="../_static/gtag_1.js?v=fd68456f"></script>
+    <link rel="icon" href="../_static/IA.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4. Améliorer ses prompts: ACTIF et APRES" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html" />
+    <link rel="prev" title="2. Fonctionnement de l’IA générative" href="../2_Comment_ca_marche/Comment_ca_marche.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../README.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="L'intelligence artificielle générative à l’ULB - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../README.html">
+                    L’intelligence artificielle générative à l’ULB
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenu</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html">1. IA générative: Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Comment_ca_marche/Comment_ca_marche.html">2. Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts: ACTIF et APRES</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../5_Points_de_vigilance/Points_de_vigilance.html">5. Points de vigilance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html">6. Principes d’utilisation à l’ULB</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Annexes/Comp%C3%A9tences.html">Compétences abordées</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Annexes/Ressources.html">Ressources</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ULB-AcademIA/guide_usages_IA" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ULB-AcademIA/guide_usages_IA/edit/main/3_Exemples_usage/Exemples_usage.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ULB-AcademIA/guide_usages_IA/issues/new?title=Issue%20on%20page%20%2F3_Exemples_usage/Exemples_usage.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/3_Exemples_usage/Exemples_usage.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Exemples d’usages</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utiliser-lia-plus-efficacement-pour-l-apprentissage">3.1. Utiliser l’IA plus efficacement pour l’apprentissage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-si-lia-resumait-mon-syllabus">3.2. Et si l’IA résumait mon syllabus ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-pour-mes-travaux-academiques-et-scientifiques">3.3. Et pour mes travaux académiques et scientifiques ?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="exemples-d-usages">
+<span id="part3"></span><h1><span class="section-number">3. </span>Exemples d’usages<a class="headerlink" href="#exemples-d-usages" title="Link to this heading">#</a></h1>
+<section id="utiliser-lia-plus-efficacement-pour-l-apprentissage">
+<h2><span class="section-number">3.1. </span>Utiliser l’IA plus efficacement pour l’apprentissage<a class="headerlink" href="#utiliser-lia-plus-efficacement-pour-l-apprentissage" title="Link to this heading">#</a></h2>
+<p>Avant d’utiliser des outils d’IA pour faciliter l’apprentissage d’un cours, il convient de se poser une première question :</p>
+<p><strong>Comment apprendre efficacement, avec ou sans outils numériques ?</strong></p>
+<p>En 2009, Hattie a étudié 800 méta-analyses (regroupant au total 52 637 recherches) afin d’identifier les principaux facteurs influençant les apprentissages. À partir de ces résultats, nous avons cherché à mettre en lien certains de ces facteurs avec des usages concrets de l’IA. La liste des méthodes d’apprentissage présentée ici n’est donc pas exhaustive ; elle met cependant en avant les facteurs compatibles avec un usage de l’IA et ayant la plus grande taille d’effet dans les travaux de Hattie, et qui exercent ainsi l’impact le plus significatif sur les apprentissages. Sans oublier qu’il est essentiel de garder des instants de réflexions déconnectés, sans outils numériques et sans IA.</p>
+<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Usages de l'IA pour l'apprentissage" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/68aee4d060b1ef654e0c0080" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<p>Hattie, J. (2009). <em>Visible Learning : A Synthesis of Over 800 Meta-Analyses Relating to Achievement.</em> Oxon : Routledge.</p>
+</section>
+<section id="et-si-lia-resumait-mon-syllabus">
+<h2><span class="section-number">3.2. </span>Et si l’IA résumait mon syllabus ?<a class="headerlink" href="#et-si-lia-resumait-mon-syllabus" title="Link to this heading">#</a></h2>
+<p>L’idée peut sembler séduisante : demander à une IA de condenser un syllabus pour gagner du temps. Pourtant, ce réflexe est rarement bénéfique pour l’apprentissage.</p>
+<p>En effet, <strong>résumer un cours fait partie intégrante de l’apprentissage</strong>. Le fait de sélectionner les idées principales, de reformuler avec ses propres mots et de créer une structure logique favorise la compréhension et la mémorisation. Confier cette étape à l’IA revient à se priver d’un travail cognitif essentiel.</p>
+<p>De plus, les résumés générés par l’IA présentent plusieurs limites :</p>
+<ul class="simple">
+<li><p>Ils <strong>peuvent être incomplets ou biaisés</strong>, car l’IA choisit elle-même ce qu’elle considère comme important.</p></li>
+<li><p>Ils <strong>risquent de simplifier</strong> <strong>ou de déformer</strong> certaines notions complexes, ce qui peut entraîner des erreurs de compréhension.</p></li>
+<li><p>Ils <strong>ne reflètent pas votre manière de penser ni vos besoins personnels</strong> en tant qu’étudiant.e, contrairement à vos propres notes.</p></li>
+</ul>
+<p>Autrement dit, utiliser l’IA pour résumer un syllabus ne fait pas gagner du temps sur le long terme : cela affaiblit l’apprentissage et peut mener à des lacunes lors des examens.</p>
+<p>Une meilleure pratique consiste à utiliser l’IA comme <strong>outil de soutien</strong> après votre propre travail de résumé : par exemple, pour comparer vos notes, vérifier que vous n’avez pas oublié un concept, ou reformuler une idée qui reste floue.</p>
+<p>Néanmoins, tous les résumés ne sont pas efficaces pour l’apprentissage, voici quelques conseils pour réellement mémoriser les informations en faisant un résumé :</p>
+<ul class="simple">
+<li><p><strong>Éviter de recopier le contenu tel quel</strong> : il est préférable de reformuler avec nos propres mots, en fonction de notre compréhension. Cela favorise une meilleure assimilation de l’information.</p></li>
+<li><p><strong>Se concentrer sur les idées principales du contenu</strong> : l’objectif est de privilégier la qualité plutôt que la quantité. Il est inutile de tout retranscrire mot à mot, il faut dégager ce qui est vraiment essentiel.</p></li>
+<li><p><strong>Structurer le résumé de manière claire</strong> : établir un plan avec des titres et sous-titres, sans alourdir la hiérarchie (inutile de multiplier les niveaux de sous-chapitres). On peut aussi laisser une marge à gauche pour y noter des mots-clés, ce qui facilitera la navigation dans les notes.</p></li>
+<li><p><strong>Intégrer des éléments visuels</strong> : schémas, graphiques, listes, couleurs… mais il faut les utiliser avec modération. Trop d’informations visuelles peuvent nuire à la concentration et surcharger la mémoire.</p></li>
+</ul>
+<p>Jansen, R. S., Lakens, D., &amp; IJsselsteijn, W. A. (2017). An integrative review of the cognitive costs and benefits of note-taking. <em>Educational Research Review, 22</em>, 223–233. <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S1747938X17300374?via%3Dihub">https://doi.org/10.1016/j.edurev.2017.10.001</a></p>
+</section>
+<section id="et-pour-mes-travaux-academiques-et-scientifiques">
+<h2><span class="section-number">3.3. </span>Et pour mes travaux académiques et scientifiques ?<a class="headerlink" href="#et-pour-mes-travaux-academiques-et-scientifiques" title="Link to this heading">#</a></h2>
+<p>A l’ULB, l’usage de l’IA pour la rédaction de travaux académiques évalués n’est pas autorisée, avec pour seule exception le mémoire de fin d’études.</p>
+<p>Un autre contexte pour lequel l’usage de l’IA est autorisé concerne les cours ou les travaux pour lesquels l’enseignant autorise explicitement l’usage de l’IA (dans les consignes du TP ou dans la fiche de cours).</p>
+<p>Outre ces deux cas de figure, il n’est pas autorisé d’utiliser l’IA. Pour en savoir plus, je vous conseille vivement d’aller consulter la section <a class="reference external" href="https://uv.ulb.ac.be/course/view.php?id=127533&amp;amp;section=6">Principes d’utilisation à l’ULB</a>. Vous y trouverez une explication claire du Règlement Général des Etudes au sujet de l’IA.</p>
+<p>Si vous vous retrouvez dans l’un des deux cas de figure autorisés, voici des exemples d’usages de l’IA pour la rédaction académique ou scientifique. Pensez également à consulter le cours <a class="reference external" href="https://uv.ulb.ac.be/course/view.php?id=89203">What’s Up Doc - Formation documentaire pour tous</a> conçu par le département des bibliothèques de l’ULB pour vous accompagner dans la réalisation de vos travaux !</p>
+<div style="width: 100%;">
+    <div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="Usages de l'IA pour mes travaux" frameborder="0" width="1200" height="675" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="https://view.genially.com/68b05f9694d891d966ef5d7d" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div>
+</div>
+<p>Certaines étapes de la recherche évoquées dans ce Genially ont été inspirées de cette présentation : <a class="reference external" href="https://www.polehainuyer.be/app/uploads/2024/11/PH-FP24-Atelier-4-LIA-au-service-des-travaux-academiques.pdf">L’intelligence artificielle au service des travaux académiques</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./3_Exemples_usage"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../2_Comment_ca_marche/Comment_ca_marche.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Fonctionnement de l’IA générative</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Améliorer ses prompts: ACTIF et APRES</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utiliser-lia-plus-efficacement-pour-l-apprentissage">3.1. Utiliser l’IA plus efficacement pour l’apprentissage</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-si-lia-resumait-mon-syllabus">3.2. Et si l’IA résumait mon syllabus ?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#et-pour-mes-travaux-academiques-et-scientifiques">3.3. Et pour mes travaux académiques et scientifiques ?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle">Université libre de Bruxelles - Academ·IA</a>
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>-->
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

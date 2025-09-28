@@ -16,34 +16,31 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!--
-    this give us a css class that will be invisible only if js is disabled
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/book.css?v=a4d1ce23" />
   
-  <!-- So that users can add custom icons -->
-  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
@@ -70,7 +67,6 @@
     <link rel="prev" title="Compétences abordées" href="Comp%C3%A9tences.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -86,8 +82,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="../search.html"
       method="get">
@@ -95,6 +102,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -102,8 +110,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -119,8 +127,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -150,17 +157,21 @@
     
     
     <img src="../_static/ulb_academia.png" class="logo__image only-light" alt="L'intelligence artificielle générative à l’ULB - Home"/>
-    <img src="../_static/ulb_academia.png" class="logo__image only-dark pst-js-only" alt="L'intelligence artificielle générative à l’ULB - Home"/>
+    <script>document.write(`<img src="../_static/ulb_academia.png" class="logo__image only-dark" alt="L'intelligence artificielle générative à l’ULB - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -174,14 +185,11 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contenu</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../1_IA_g%C3%A9n%C3%A9rative_introduction/IA_g%C3%A9n%C3%A9rative_introduction.html">1. IA générative: Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../2_Exemples_usage/Exemples_usage.html">2. Exemples d’usages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../3_Comment_ca_marche/Comment_ca_marche.html">3. Fonctionnement de l’IA générative</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_Comment_ca_marche/Comment_ca_marche.html">2. Fonctionnement de l’IA générative</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../3_Exemples_usage/Exemples_usage.html">3. Exemples d’usages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../4_Am%C3%A9liorer_ses_prompts/Am%C3%A9liorer_ses_prompts.html">4. Améliorer ses prompts: ACTIF et APRES</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../5_Points_de_vigilance/Points_de_vigilance.html">5. Points de vigilance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../6_Principes_utilisation_ULB/Principes_utilisation_ULB.html">6. Principes d’utilisation à l’ULB</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../7_Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence/Bo%C3%AEte_%C3%A0_outils_de_r%C3%A9f%C3%A9rence.html">7. Boîte à outils de référence</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../8_Jeu_test_de_Turing/Jeu_test_de_Turing.html">8. Jeu - Test de Turing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../9_Aller_plus_loin/Aller_plus_loin.html">9. Aller plus loin</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
 <ul class="current nav bd-sidenav">
@@ -195,14 +203,9 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
-      <div class="sidebar-primary-item">
-<div id="ethical-ad-placement"
-      class="flat"
-      data-ea-publisher="readthedocs"
-      data-ea-type="readthedocs-sidebar"
-      data-ea-manual="true">
-</div></div>
   </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -363,16 +366,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -398,14 +409,15 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cadres-de-competences">Cadres de compétences</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organisations">Organisations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blogs">Blogs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cours">Cours</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#podcast">Podcast</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regulation">Regulation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctionnement">Fonctionnement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompting">Prompting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-de-vigilances">Points de vigilances</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils">Outils</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aller-plus-loin">Aller plus loin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rapports">Rapports</a></li>
 </ul>
             </nav>
         </div>
@@ -428,8 +440,12 @@
 </ul>
 </li>
 <li><p><a class="reference external" href="https://unesdoc.unesco.org/ark:/48223/pf0000391105/PDF/391105eng.pdf.multi">UNESCO – AI Competency Framework for Students (2024)</a></p></li>
-<li><p><a class="reference external" href="https://unesdoc.unesco.org/ark:/48223/pf0000391104">UNESCO – AI Competency Framework for Teachers (2024)</a></p></li>
+<li><p><a class="reference external" href="https://unesdoc.unesco.org/ark:/48223/pf0000391104">UNESCO – AI Competency Framework for Teachers (2024)</a></p>
+<ul>
 <li><p>https://rire.ctreq.qc.ca/quel-est-le-role-des-milieux-educatifs-face-a-lia-le-cadre-de-competences-de-lunesco</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://ailiteracyframework.org/">OECD - Empowering learners for the age of AI</a></p></li>
 </ul>
 </section>
 <section id="organisations">
@@ -441,10 +457,25 @@
 <li><p>https://cafeia.org/</p></li>
 </ul>
 </section>
+<section id="blogs">
+<h2>Blogs<a class="headerlink" href="#blogs" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>https://danslesalgorithmes.net/</p></li>
+</ul>
+</section>
 <section id="cours">
 <h2>Cours<a class="headerlink" href="#cours" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Destiné aux étudiant·es des différents masters de la HES-SO (Suisse), Richard-Emmanuel Eastes - IA générative: https://www.youtube.com/watch?v=PXqMH75rQQ0&amp;list=PLZ5Ri5aSowtukezIs1Bg8u8pQrrd5VprV - https://numerique.hes-so.ch/course/view.php?id=254</p></li>
+<li><p>https://openmoodle.uclouvain.be/course/view.php?id=157#section-0</p></li>
+<li><p><a class="reference external" href="https://www.fun-mooc.fr/fr/cours/lintelligence-artificielle-avec-intelligence/">https://www.fun-mooc.fr/fr/cours/lintelligence-artificielle-avec-intelligence/</a></p></li>
+<li><p><a class="reference external" href="https://www.elementsofai.be/fr/">https://www.elementsofai.be/fr/</a></p></li>
+<li><p>Rapsberry course</p>
+<ul>
+<li><p><a class="reference external" href="https://experience-ai.org/fr-CA">https://experience-ai.org/fr-CA</a> -&gt; generative aui and media literacy</p></li>
+<li><p><a class="reference external" href="https://learning.edx.org/course/course-v1:RaspberryPiFoundation+RPFAITeachers+2T2024/home">Teach teens computing: Understanding AI for educators</a></p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="podcast">
@@ -457,6 +488,11 @@
 <h2>Regulation<a class="headerlink" href="#regulation" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>EU AI Act: https://artificialintelligenceact.eu/</p></li>
+<li><p>Article 4 - AI literacy: https://digital-strategy.ec.europa.eu/en/faqs/ai-literacy-questions-answers</p>
+<ul>
+<li><p><a class="reference external" href="https://artificialintelligenceact.eu/article/4/">https://artificialintelligenceact.eu/article/4</a><a class="reference external" href="https://artificialintelligenceact.eu/article/4/">/</a></p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="fonctionnement">
@@ -466,9 +502,6 @@
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=7ell8KEbhJo">Ce qui se cache derrière le fonctionnement de ChatGPT</a> - Science étonnante - David Louapre</p></li>
 <li><p>En anglais: <a class="reference external" href="https://ig.ft.com/generative-ai/">Generative AI exists because of the transformer</a></p></li>
 </ul>
-</section>
-<section id="prompting">
-<h2>Prompting<a class="headerlink" href="#prompting" title="Link to this heading">#</a></h2>
 </section>
 <section id="points-de-vigilances">
 <h2>Points de vigilances<a class="headerlink" href="#points-de-vigilances" title="Link to this heading">#</a></h2>
@@ -490,6 +523,16 @@
 <h2>Aller plus loin<a class="headerlink" href="#aller-plus-loin" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>https://dataforgood.fr/iagenerative/</p></li>
+<li><p>https://framamia.org/en/</p></li>
+<li><p>https://developmentalsystems.org/chatgpt_5_minutes/fr/</p></li>
+<li><p>https://cafeia.org/je-me-forme-a-lia/ - https://cafeia.org/ressources-pedagogiques/</p></li>
+<li><p>https://learn.epfl.ch/initiatives/bd-utopia/</p></li>
+</ul>
+</section>
+<section id="rapports">
+<h2>Rapports<a class="headerlink" href="#rapports" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.learningplanetinstitute.org/wp-content/uploads/2025/07/IA-ENSEIGNEMENT-SUPERIEUR.pdf">https://www.learningplanetinstitute.org/wp-content/uploads/2025/07/IA-ENSEIGNEMENT-SUPERIEUR.pdf</a></p></li>
 </ul>
 </section>
 </section>
@@ -540,8 +583,7 @@
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -552,14 +594,15 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cadres-de-competences">Cadres de compétences</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organisations">Organisations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blogs">Blogs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cours">Cours</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#podcast">Podcast</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regulation">Regulation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctionnement">Fonctionnement</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prompting">Prompting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#points-de-vigilances">Points de vigilances</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#outils">Outils</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aller-plus-loin">Aller plus loin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rapports">Rapports</a></li>
 </ul>
   </nav></div>
 
@@ -607,8 +650,8 @@ Copyright ULB, 2025 <!--Licence: <a href="https://creativecommons.org/licenses/b
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
-<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
