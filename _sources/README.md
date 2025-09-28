@@ -9,8 +9,8 @@ Le guide a été conçu dans le cadre du plan de formation <a href="https://www.
 **Contenu:**
 
 1. [IA générative: Introduction](part1)
-2. [Exemples d'usages](part2)
-3. [Fonctionnement de l’IA générative](part3)
+2. [Fonctionnement de l’IA générative](part2)
+3. [Exemples d'usages](part3)
 4. [Améliorer son prompt](part4)
 5. [Points de vigilance](part5)
 6. [Principes d'utilisation à l'ULB](part6)
