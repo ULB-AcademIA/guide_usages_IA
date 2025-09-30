@@ -20,5 +20,5 @@ parts:
   - caption: Annexes
     chapters:
     - file: Annexes/Compétences
-    - file: Annexes/Ressources
+    - file: Annexes/Ressources_Comp
 
