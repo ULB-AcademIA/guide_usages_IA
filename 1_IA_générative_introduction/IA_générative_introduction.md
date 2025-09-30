@@ -23,7 +23,7 @@ Microsoft Copilot est accessible à l'adresse [https://copilot.cloud.microsoft/
 
 Voici ci-dessous un échange avec Copilot, demandant de générer des paroles d'une chanson sur le thème du libre examen dans un style hip-hop.
 
-![copilot_example_gpt4](attachments/copilot_example_gpt5.png)
+![copilot_example_gpt4](attachments/1_GPT5_Vert_Text.jpg)
 
 Pas si mal !
 
