@@ -28,5 +28,5 @@ Ce support a été conçu dans le cadre du plan de formation <a href="https://ww
 
 Pour toute question, n'hésitez pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
 
-Ce guide est en cours de construction.
+
 
