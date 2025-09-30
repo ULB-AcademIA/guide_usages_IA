@@ -1,13 +1,12 @@
 # L'intelligence artificielle générative à l'ULB
 
-🎓 Vous êtes étudiant·e à l’Université libre de Bruxelles ?
+🎓 Étudiant·e à l’Université libre de Bruxelles ?
 
-Bienvenue sur cette page dédiée à l’exploration des usages académiques et responsables de l’intelligence artificielle générative. 
+Que vous commenciez tout juste votre parcours universitaire ou que vous soyez en fin de master, l’intelligence artificielle générative fait désormais partie des outils qui transforment nos manières d’apprendre, de créer et de travailler.
 
-Vous y découvrirez des recommandations pratiques pour tirer le meilleur parti d’outils comme ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et d’autres assistants IA, tout en respectant les exigences scientifiques et éthiques de l’université.
+Sur cette page, vous trouverez des repères clairs et des conseils pratiques pour utiliser de façon éclairée des assistants tels que ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et d’autres outils d’IA. 
 
-Ce support a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>, afin de vous accompagner dans vos apprentissages et vos projets en intégrant ces nouvelles technologies de manière éclairée.
-
+L’objectif : vous aider à en tirer profit dans vos études, tout en respectant les exigences scientifiques et éthiques de l’ULB.
 
 **Contenu:**
 
@@ -30,6 +29,8 @@ Ce support a été conçu dans le cadre du plan de formation <a href="https://ww
 **✏️ L'équipe CeCo·IA à votre écoute**
 
 Pour toute question, n'hésitez pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
+
+Ce support s’inscrit dans le cadre du plan de formation  <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>, qui accompagne toute la communauté universitaire dans la découverte et l’usage responsable de ces nouvelles technologies.
 
 
 
