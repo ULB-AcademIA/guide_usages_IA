@@ -1,20 +1,6 @@
 (part5)=
 # Points de vigilance
 
-## Les outils d'IA générative ne sont pas des moteurs de recherche
-
-Ils ne sont pas conçus pour fournir des résultats fiables et cohérents. Comme présenté dans la section "Fonctionnement de l'IA générative", ce sont des outils d'auto-complétion conçus pour produire des contenus statistiquement probables. 
-
-Ces outils peuvent donc inventer des contenus, se contredire, ou produire des contenus incohérents ou bizarres.
-
-Par exemple, ils peuvent :
-
-- retourner des réponses différentes pour un même prompt. Les réponses à une question peuvent même se contredire. La cause est l'aspect probabiliste dans la génération de la réponse.
-- sembler avoir des opinions, des préférences ou des goûts (comme par exemple préférer la couleur bleue). Ceux-ci ne sont que le reflet des biais présents dans les données d'entraînement. 
-- donner de meilleures réponses lorsque l'on demande de réfléchir étape par étape (ou [de respirer un grand coup](https://arstechnica.com/information-technology/2023/09/telling-ai-model-to-take-a-deep-breath-causes-math-scores-to-soar-in-study/ "de respirer un grand coup")). Ceci est une conséquence de l'auto-complétion, par laquelle l'IA générative va tenter de prédire une procédure de résolution qu'elle pourra ensuite prendre en compte pour prédire une réponse.
-
-Plutôt que des outils de recherche d'information, ce sont surtout de bons alliés pour des activités d'exploration d'idées (tout en prenant garde à leurs biais) ou de reformulation.
-
 ## Fiabilité des informations produites par l'IA
 
 L'IA peut commettre des erreurs et des hallucinations lorsqu'elle produit du contenu. Pour bien comprendre cela, nous vous invitons à lire la section sur le fonctionnement de l'IA :  "[Fonctionnement de l'IA générative](https://uv.ulb.ac.be/course/view.php?id=127533&section=2)".
@@ -66,18 +52,13 @@ Les nouveaux centres de données de type [hyperscale](https://fr.wikipedia.org/w
 ![gpu_and_data_centers](attachments/gpu_and_data_centers.png)
 
 
-🏭  L’évolution rapide de l’IA rend difficile l’obtention de chiffres précis sur l'impact environnemental de l'IA générative. Les rapports environnementaux des GAFAM de 2023 révèlent cependant clairement l’ampleur de son impact sur l’environnement comme le souligne le site [Alt Impact de l'Ademe](https://altimpact.fr/bonnes-pratiques/eviter-le-recours-a-lia-generative/): Microsoft a ainsi vu ses émissions de carbone augmenter de 30 % depuis 2020, tandis que Google a enregistré une hausse de 48 % depuis 2019. 
+Pour en savoir plus sur le sujet, nous t'invitons à regarder cette vidéo. 
 
-💧 Plus proche de chez nous, concernant la consommation d'eau, le [rapport environnemental de Google 2024](https://sustainability.google/reports/google-2024-environmental-report/) précise que le centre de données de Saint Ghislain en Belgique près de Mons consomme annuellement environ un million de mètres cubes d'eau pour empêcher la surchauffe de ses serveurs, dont la majeure partie s'évapore. Ceci équivaut à la consommation annuelle d'environ 10 000 ménages de la région.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kaZ6zTwVncw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-⚡ Et pour l'énergie, le fonctionnement d'un outil comme ChatGPT requièrent plusieurs cartes GPUs de type H100, dont la consommation d'énergie équivaut à chauffer une maison. A la place d'une maison, ce sont ici de puissants GPUs dans un centre de données qui chauffent, et nécessitent ensuite l'eau dont nous venons de parler pour être refroidis. La consommation de ce type de cartes GPUs en 2027 [pourrait atteindre 135TWh](https://altimpact.fr/bonnes-pratiques/eviter-le-recours-a-lia-generative/), soit la production d'environ 20 centrales nucléaires de type [Three Mile Island](https://en.wikipedia.org/wiki/Three_Mile_Island_Nuclear_Generating_Station), telle que celle que Microsoft envisage de réouvrir en 2028 pour ses besoins en IA. 
+Et individuellement, comment peux-tu estimer le coût environnemental d'une conversation avec ton chatbot favori?
 
-![nuclear_plant](attachments/nuclear_plant.png)
-
-
-Et individuellement, comment pouvons-nous estimer le coût environnemental d'une conversation avec notre chatbot favori?
-
-Le site [Compar:IA](https://www.comparia.beta.gouv.fr/) donne quelques éléments d'information : cela dépend du type de modèle utilisé, de la longueur de la question et de la réponse, et des sources d'énergie utilisées. [Teste-le et compare](https://www.comparia.beta.gouv.fr/) les réponses de différents chatbots et leurs impacts environnementaux.
+Le site [Compar:IA](https://www.comparia.beta.gouv.fr/) te donne quelques éléments d'information, et cela dépend du type de modèle utilisé, de la longueur de la question et de la réponse, et des sources d'énergie utilisées. [Teste-le et compare](https://www.comparia.beta.gouv.fr/) les réponses de différents chatbots et leurs impacts environnementaux.
 
 Un exemple ici de l'impact énergétique d'une petite conversation avec le modèle Google Gemini 2.0 Flash (un modèle de taille moyenne):
 
@@ -93,8 +74,9 @@ De nombreuses organisations comme l’ADEME considère ainsi qu’il faut raiso
 
 Eviter d'avoir recours à l'IA générative fait ainsi partie des pratiques à impact très fort mises en avant par le programme [Alt Impact](https://altimpact.fr/), qui propose les alternatives suivantes à l’IA générative:
 
-1. **Préférer les moteurs de recherches à l’IA générative** lorsqu’ils peuvent offrir le même service. Préférer aussi les moteurs comme DuckDuckGo plutôt que Google ou Bing qui intègre maintenant l'IA générative dans leur réponse (et sont moins respectueux de vos données personnelles). Et pour des questions factuelles comme « Quelle est la capitale du Cambodge ? », utiliser tout simplement Wikipédia! Et si c’est vraiment inévitable d'interroger un IA, aller droit au but : exit les conversations superflues ! 
+1. **Préférer les moteurs de recherches à l’IA générative** lorsqu’ils peuvent offrir le même service. Préférer aussi les moteurs comme DuckDuckGo plutôt que Google ou Bing qui intègre maintenant l'IA générative dans leur réponse (et sont moins respectueux de vos données personnelles). Et pour des questions factuelles comme « Quelle est la capitale du Cambodge ? », utiliser tout simplement Wikipédia ! Et si c’est vraiment inévitable d'interroger un IA, aller droit au but : exit les conversations superflues ! 
 2. **Privilégier une IA spécifique (traduction, orthographe)** plutôt qu’une IA générative, cela consommera beaucoup moins d’énergie. Exemple pour de la traduction, privilégier DeepL ou un site de dictionnaire comme “WordRéférence” pour chercher un mot en particulier plutôt que des IA conversationnelles.
-3. **Eviter autant que possible le recours à l’IA générative pour générer des images ou des vidéos**. Oui c’est amusant… mais son coût environnemental est salé. Les études montrent que générer une image ou encore une vidéo avec l’IA consomme bien plus d’énergie que de créer du texte, et qu’en plus, il y a souvent plus de déchets dans le processus… Dans la mesure du possible, utiliser des images déjà existantes provenant de banques d’images libres de droit.
+3. **Utilisation responsable** : Limiter l'utilisation des outils d'IA générative aux besoins essentiels et éviter les usages superflus qui consomment des ressources inutilement. Garder des moments de réflexion déconnectée.
+
 
 

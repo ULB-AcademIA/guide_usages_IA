@@ -1,4 +1,4 @@
-(part3)=
+(part2)=
 # Fonctionnement de l'IA générative
 
 ## Exercice d'échauffement 
@@ -30,7 +30,7 @@ Le modèle tire au sort l'une des possibilités et renvoie le mot à l'utilisate
 
 Vous avez peut-être remarqué que les chatbots d'IA générative affichent les mots les uns à la suite des autres lorsqu'il répondent. La raison est tout simplement car les mots sont prédits les uns après les autres, comme si vous acceptiez automatiquement les propositions faites par le système d'auto-complétion de ton téléphone. 
 
-A la différence de l'auto-complétion du téléphone, un modèle de prédiction comme GPT-4 (qui se cache derrière un outil comme Microsoft Copilot ou ChatGPT) a été entraîné sur d'**énormes** quantités de données, et nécessite généralement du matériel informatique spécialisé dont le coût environnemental n'est pas négligeable.  
+A la différence de l'auto-complétion du téléphone, un modèle de prédiction comme GPT-5 (qui se cache derrière un outil comme Microsoft Copilot ou ChatGPT) a été entraîné sur d'**énormes** quantités de données, et nécessite généralement du matériel informatique spécialisé dont le coût environnemental n'est pas négligeable.  
 
 Pour en savoir plus sur le fonctionnement, nous vous conseillons [cette vidéo](https://www.youtube.com/watch?v=7ell8KEbhJo&t=848s) (à partir de 14:08 pour d'autres exemples de génération).
 ## Données d'apprentissage et modèle de langage
