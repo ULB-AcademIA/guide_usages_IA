@@ -2,9 +2,9 @@
 
 ## Pourquoi ce guide?
 
-Découvre avec ce guide les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, Copilot et autres assistants IA à l'Université libre de Bruxelles. 
+Découvrez sur cette page les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et autres assistants IA à l'Université libre de Bruxelles.
 
-Le guide a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>.
+Ce support a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>.
 
 **Contenu:**
 
@@ -15,9 +15,7 @@ Le guide a été conçu dans le cadre du plan de formation <a href="https://www.
 5. [Points de vigilance](part5)
 6. [Principes d'utilisation à l'ULB](part6)
 
-</p>
-
-**👩‍🎓 Tu penses déjà tout savoir sur le sujet? Teste tes connaissances avec ce quiz!**
+**👩‍🎓 Quelles sont les parties de ce guide les plus pertinentes pour vous ? Faîtes le quiz pour le savoir !**
 
 <center>
     <div style="width: 100%;">
@@ -25,14 +23,10 @@ Le guide a été conçu dans le cadre du plan de formation <a href="https://www.
     </div>
 </center>
 
-</p>
 
-**✏️ L'équipe CeCo·IA à ton écoute**
+**✏️ L'équipe CeCo·IA à votre écoute**
 
-Pour toute question, n'hésite pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
+Pour toute question, n'hésitez pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
 
 Ce guide est en cours de construction.
-
-
-
 

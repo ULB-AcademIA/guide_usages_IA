@@ -17,13 +17,14 @@ Voyons quelques exemples avec l'outil Microsoft Copilot, qui est l'outil d'IA g�
 
 **Note**: **Microsoft Copilot est l'outil à privilégier à l'ULB** car c'est le seul qui garantit la confidentialité et la propriété des données transmises ou produites grâce au contrat qui lie Microsoft à l’ULB. De nombreux autres outils d'IA génératives existent, en particulier open-source, voir la section "Boîte à outils de référence".
 
-Microsoft Copilot est accessible à l'adresse [https://copilot.cloud.microsoft/](https://copilot.cloud.microsoft/), où tu pourras t'y connecter avec ton adresse email ULB. **Le pictogramme d’un bouclier vert doit être présent en haut à droite pour confirmer que tes conversations sont protégées**.
+Microsoft Copilot est accessible à l'adresse [https://copilot.cloud.microsoft/](https://copilot.cloud.microsoft/), où vous pouvez vous y connecter avec votre adresse email ULB. Le pictogramme d’un bouclier vert doit être présent en haut à droite pour confirmer que vos conversations sont protégées.
 
 ### Génération de texte
 
 Voici ci-dessous un échange avec Copilot, demandant de générer des paroles d'une chanson sur le thème du libre examen dans un style hip-hop.
 
-![copilot_example_gpt4](attachments/1_GPT5_Vert_Text.jpg)
+![copilot_example_gpt4](attachments/copilot_example_gpt5.png)
+
 Pas si mal !
 
 Que s'est-il passé dans cet échange ?
@@ -41,6 +42,7 @@ Le modèle GPT-5 qui se cache derrière l'interface utilisateur Copilot permet a
 Ici, nous demandons de générer une illustration, dans un style art-nouveau, de Pierre-Théodore Verhaegen en train de rapper sur la place Flagey.
 
 ![copilot_example_dalle3](attachments/1_GPT5_Vert_Image.jpg)
+
 
 Rendez-vous sur la page Wikipédia du [fondateur de l'ULB](https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen "https://fr.wikipedia.org/wiki/Pierre-Th%C3%A9odore_Verhaegen") et demandez-vous: 
 - Ressemble-t-il à la représentation qui en est faite par l'IA générative ? 
