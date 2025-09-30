@@ -1,10 +1,10 @@
 # L'intelligence artificielle générative à l'ULB
 
-🎓 Étudiant·e à l’Université libre de Bruxelles ?
+🎓 Vous êtes étudiant·e à l’Université libre de Bruxelles ?
 
-Que vous commenciez tout juste votre parcours universitaire ou que vous soyez en fin de master, l’intelligence artificielle générative fait désormais partie des outils qui transforment nos manières d’apprendre, de créer et de travailler.
+Bienvenue sur cette page dédiée à l’exploration des usages académiques et responsables de l’intelligence artificielle générative. 
 
-Sur cette page, vous trouverez des repères clairs et des conseils pratiques pour utiliser de façon éclairée des assistants tels que ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et d’autres outils d’IA. 
+Vous y trouverez des repères clairs et des conseils pratiques pour utiliser de façon éclairée des assistants tels que ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et d’autres outils d’IA.
 
 L’objectif : vous aider à en tirer profit dans vos études, tout en respectant les exigences scientifiques et éthiques de l’ULB.
 
