@@ -9,14 +9,11 @@ Ce support a été conçu dans le cadre du plan de formation <a href="https://ww
 **Contenu:**
 
 1. [IA générative: Introduction](part1)
-2. [Exemples d'usages](part2)
-3. [Fonctionnement de l’IA générative](part3)
+2. [Fonctionnement de l’IA générative](part2)
+3. [Exemples d'usages](part3)
 4. [Améliorer son prompt](part4)
 5. [Points de vigilance](part5)
 6. [Principes d'utilisation à l'ULB](part6)
-7. [Boîte à outils de référence](part7)
-8. [Jeu - Test de Turing](part8)
-9. [Aller plus loin](part9)
 
 **👩‍🎓 Quelles sont les parties de ce guide les plus pertinentes pour vous ? Faîtes le quiz pour le savoir !**
 
@@ -31,15 +28,5 @@ Ce support a été conçu dans le cadre du plan de formation <a href="https://ww
 
 Pour toute question, n'hésitez pas à contacter l'équipe de [CeCo·IA](https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle) (Cellule de Coordination pour l'Intelligence Artificielle de l'ULB) à [cecoia@ulb.be](mailto:cecoia@ulb.be). 
 
-📌 **Pages partenaires**
-
-- [Academ·IA - Groupe de travail](https://portail.ulb.be/fr/informatique/academ-ia-groupe-de-travail)
-- [CAP | Assistants IA : quels enjeux pédagogiques ?](https://uv.ulb.ac.be/course/view.php?id=111621)
-- [FARI - AI for the common good - Brussels](https://www.fari.brussels/fr/calendrier)
-
-Le guide est en cours de construction.
-
-![beaver](beaver.png)
-
-Image credit: Dall-E 3.
+Ce guide est en cours de construction.
 
