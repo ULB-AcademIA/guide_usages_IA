@@ -1,8 +1,8 @@
 # L'intelligence artificielle générative à l'ULB
 
-## Pourquoi ce guide?
+Vous êtes étudiant.e à l'Université libre de Bruxelles ? 
 
-Découvrez sur cette page les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et autres assistants IA à l'Université libre de Bruxelles.
+Découvrez sur cette page les usages recommandés des outils d'intelligence artificielle générative de type ChatGPT, [Copilot Chat](https://copilot.cloud.microsoft/) et autres assistants IA.
 
 Ce support a été conçu dans le cadre du plan de formation <a href="https://www.ulb.be/fr/intelligence-artificielle/academ%C2%B7ia-plan-de-formation-pour-lintelligence-artificielle" target="_blank">ULB Academ·IA</a>.
 

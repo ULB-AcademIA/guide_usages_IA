@@ -1,7 +1,7 @@
 (part6)=
 # Principes d'utilisation à l'ULB
 
-L'utilisation des outils d'intelligence artificielle générative (IAG) est permise à l'ULB pour vous assister dans votre parcours académique, mais elle est encadrée pour garantir l'intégrité de vos travaux.
+L'ULB place un cadre réglementaire pour l'utilisation des outils intelligence artificielle générative (IAG) afin de garantir l'intégrité de vos travaux. En cas de doute, vérifiez avec vos enseignant.e.s !
 
 ![charte_usages_ULB](attachments/charte_usages_ULB.png)
 
